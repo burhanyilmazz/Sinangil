@@ -1,0 +1,177 @@
+.footer {
+  background: $eastBay;
+  padding-top: 100px;
+
+  .row + .row {
+    margin-top: 70px;
+    padding: 20px 0;
+
+    &:before {
+      width: calc(100% - 140px);
+      height: 1px;
+      background: $white;
+      display: block;
+      position: absolute;
+      content: "";
+      left: 70px;
+      margin-top: -20px;
+      opacity: 0.2;
+    }
+  }
+
+  h5,
+  h6 {
+    font-size: 18px;
+    font-weight: 700;
+    color: $orange;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    color: $white;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__logo {
+    margin-top: 40px;
+  }
+
+  &__nav {
+    li {
+      a {
+        color: $white;
+        font-size: 14px;
+        font-weight: 700;
+        display: block;
+        padding: 9px 0;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  &__social-media {
+    text-align: right;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin-left: 16px;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background: $waikawaGray;
+          color: $white;
+
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+
+  &__legal {
+    font-weight: 700;
+    text-align: right;
+    margin-top: 50px;
+
+    li {
+      margin-top: 30px;
+      a {
+        color: $white;
+        opacity: 0.5;
+        font-size: 14px;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    color: $cadetBlue;
+    font-size: 14px;
+    line-height: 18px;
+
+    span {
+      color: $orange;
+    }
+  }
+
+  .gercek-dusler {
+    text-align: right;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    .row + .row {
+      &:before {
+        width: calc(100% - 50px);
+        left: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 10px;
+    text-align: center;
+
+    &__logo{
+      img{
+        width: 80px;
+      }
+    }
+
+    .row + .row {
+      &:before {
+        width: 100%;
+        left: 0px;
+      }
+    }
+
+    &__nav, h5{
+      display: none;
+    }
+
+    &__social-media, .gercek-dusler{
+      text-align: center;
+
+      ul{
+        justify-content: center;
+      }
+    }
+
+    &__legal{
+      text-align: center;
+      margin-top: 30px;
+
+      ul{
+        justify-content: center;
+
+        li{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

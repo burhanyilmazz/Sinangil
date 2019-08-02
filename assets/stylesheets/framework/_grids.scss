@@ -1,0 +1,258 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 70px;
+  padding-left: 70px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container-fluid {
+    padding-right: 30px;
+  padding-left: 30px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+[class*="col-"] {
+  //position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.col-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+
+.order-first {
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+.order-last {
+  -ms-flex-order: 13;
+  order: 13;
+}
+
+$columns: 12;
+@for $i from $columns through 1 {
+  .col-#{$i} {
+    flex: 0 0 ((100 / $columns) * $i) * 1%;
+    max-width: ((100 / $columns) * $i) * 1%;
+  }
+
+  .offset-#{$i} {
+    margin-left: ((100 / $columns) * $i) * 1%;
+  }
+
+  .order-#{$i} {
+    -ms-flex-order: #{$i};
+    order: #{$i};
+  }
+}
+
+@media (min-width: 576px) {
+  .col-sm {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-sm-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+  @for $i from $columns through 1 {
+    .col-sm-#{$i} {
+      flex: 0 0 ((100 / $columns) * $i) * 1%;
+      max-width: ((100 / $columns) * $i) * 1%;
+    }
+
+    .offset-sm-#{$i} {
+      margin-left: ((100 / $columns) * $i) * 1%;
+    }
+
+    .order-sm-#{$i} {
+      -ms-flex-order: #{$i};
+      order: #{$i};
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-md-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  @for $i from $columns through 1 {
+    .col-md-#{$i} {
+      flex: 0 0 ((100 / $columns) * $i) * 1%;
+      max-width: ((100 / $columns) * $i) * 1%;
+    }
+
+    .offset-md-#{$i} {
+      margin-left: ((100 / $columns) * $i) * 1%;
+    }
+
+    .order-md-#{$i} {
+      -ms-flex-order: #{$i};
+      order: #{$i};
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-lg-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+  @for $i from $columns through 1 {
+    .col-lg-#{$i} {
+      flex: 0 0 ((100 / $columns) * $i) * 1%;
+      max-width: ((100 / $columns) * $i) * 1%;
+    }
+
+    .offset-lg-#{$i} {
+      margin-left: ((100 / $columns) * $i) * 1%;
+    }
+
+    .order-lg-#{$i} {
+      -ms-flex-order: #{$i};
+      order: #{$i};
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-xl-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+  @for $i from $columns through 1 {
+    .col-xl-#{$i} {
+      flex: 0 0 ((100 / $columns) * $i) * 1%;
+      max-width: ((100 / $columns) * $i) * 1%;
+    }
+
+    .offset-xl-#{$i} {
+      margin-left: ((100 / $columns) * $i) * 1%;
+    }
+
+    .order-xl-#{$i} {
+      -ms-flex-order: #{$i};
+      order: #{$i};
+    }
+  }
+}

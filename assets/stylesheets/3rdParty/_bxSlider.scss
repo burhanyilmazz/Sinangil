@@ -1,0 +1,56 @@
+/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+/** THEME
+===================================*/
+/* LOADER */
+/* PAGER */
+/* DIRECTION CONTROLS (NEXT / PREV) */
+/* AUTO CONTROLS (START / STOP) */
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+/* IMAGE CAPTIONS */
+.bx-wrapper {
+	position: relative;
+	padding: 0;
+	*zoom: 1;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	background: #fff;
+	img {
+		max-width: 100%;
+		display: block;
+	}
+	.bx-pager {
+		position: absolute;
+		bottom: -30px;
+		width: 100%;
+		text-align: center;
+		font-size: .85em;
+		font-family: Arial;
+		font-weight: bold;
+		color: #666;
+		padding-top: 20px;
+	}
+
+
+	.bx-pager-item {
+		display: inline-block;
+		vertical-align: bottom;
+		*zoom: 1;
+		*display: inline;
+		font-size: 0;
+		line-height: 0;
+	}
+
+}
+.bxslider {
+	margin: 0;
+	padding: 0;
+}
+ul.bxslider {
+	list-style: none;
+}
+.bx-viewport {
+	-webkit-transform: translatez(0);
+}

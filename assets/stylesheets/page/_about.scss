@@ -1,0 +1,117 @@
+.about {
+  background: url(../images/about/bg.png) center top no-repeat;
+  margin-top: 150px;
+  text-align: center;
+
+  h1 {
+    font-size: 72px;
+    color: $eastBay;
+    font-weight: 700;
+    margin: 118px 0 0;
+  }
+
+  h4 {
+    font-size: 30px;
+    color: $orange;
+    font-weight: 700;
+    margin: 0 0 200px;
+  }
+
+  p {
+    font-size: 18px;
+    color: $eastBay;
+  }
+
+  &__box {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 11px solid $white;
+    margin-top: 30px;
+
+    figure {
+      position: relative;
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        @include transition(0.5s);
+      }
+    }
+
+    samp {
+      position: absolute;
+      z-index: 2;
+      color: $eastBay;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: left;
+      line-height: 28px;
+      font-family: "yummo";
+      left: 30px;
+      top: 30px;
+
+      span {
+        font-size: 72px;
+        display: inline-block;
+        margin-top: 8px;
+        margin-left: -8px;
+      }
+    }
+
+    &--white {
+      samp {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      figure {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    &__slider {
+      .swiper {
+        &-button-next,
+        &-button-prev {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    background-size: contain;
+
+    h1 {
+      margin: 0;
+    }
+    h4 {
+      margin: 0 0 100px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .about {
+    &__box{
+      figure{
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

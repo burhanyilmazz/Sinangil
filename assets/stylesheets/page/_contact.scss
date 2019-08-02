@@ -1,0 +1,238 @@
+.contact {
+  margin-top: 90px;
+
+  #map {
+    width: 100%;
+    height: calc(100vh - 90px);
+    position: relative !important;
+    top: 0;
+  }
+
+  &__address {
+    background: $eastBay;
+    display: flex;
+    flex-direction: column;
+    height: calc(50vh - 45px);
+    width: 100%;
+    justify-content: center;
+    padding: 0 70px;
+    box-sizing: border-box;
+
+    &--1 {
+      background: $kashmirBlue;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $orange;
+    }
+
+    table {
+      color: $white;
+      font-size: 14px;
+      margin-top: 20px;
+
+      td {
+        padding: 5px 5px 5px 0;
+      }
+
+      a[href*="tel"] {
+        color: $white;
+      }
+
+      a[href*="mailto"] {
+        color: $orange;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    height: calc(50vh - 45px);
+    width: 100%;
+    justify-content: center;
+    padding: 0 70px;
+    box-sizing: border-box;
+
+    h2 {
+      color: $orange;
+      font-weight: 700;
+      font-size: 30px;
+      margin: 0;
+    }
+
+    h3 {
+      color: $eastBay;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 0;
+      position: relative;
+      border-bottom: 0;
+
+      i {
+        position: absolute;
+        color: $red;
+        right: 15px;
+        top: 21px;
+      }
+
+      .form-control {
+        background-color: none;
+        border: 0;
+        background: transparent;
+        box-shadow: 0px 0px 0px;
+        font-size: 14px;
+        color: $eastBay;
+        resize: none;
+        padding: 28px 18px;
+        border: 1px solid $geyser;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        -webkit-appearance: none;
+        border-radius: 0px;
+        font-family: "yummo";
+
+        &::placeholder {
+          color: $geyser;
+        }
+
+        &:focus {
+          border-color: $eastBay;
+
+          &::placeholder {
+            color: transparent;
+          }
+        }
+
+        &.border-right {
+          border-right: 1px solid $geyser;
+
+          &:focus {
+            border-color: $eastBay;
+          }
+        }
+
+        &.parsley-error {
+          border-color: $red !important;
+        }
+      }
+
+      &.border {
+        border: 1px solid $geyser;
+        padding: 17px 18px;
+      }
+
+      span {
+        display: block;
+        color: $eastBay;
+        margin-bottom: 1px;
+      }
+
+      &.form-actions {
+        padding: 0;
+        border-color: $orange;
+
+        .btn-submit {
+          padding: 21px 25px;
+          border-radius: 0px;
+          background: $orange;
+          color: $white;
+          font-size: 14px;
+          text-align: left;
+          position: relative;
+          display: flex;
+          align-items: center;
+          line-height: 1;
+
+          figure {
+            @include transition(0.4s);
+            right: 40px;
+            position: absolute;
+          }
+
+          &:hover {
+            figure {
+              right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .parsley-errors-list {
+      display: none !important;
+    }
+  }
+}
+
+@supports (position: sticky) {
+  .contact {
+    #map {
+      position: sticky !important;
+      top: 90px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .contact {
+    &__address {
+      padding: 0 45px;
+
+      table {
+        margin-top: 0;
+      }
+    }
+
+    &__form {
+      padding: 0 45px;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .contact {
+    &__address {
+      padding: 45px;
+      height: auto;
+    }
+
+    &__form {
+      padding: 45px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+   margin-top: 70px;
+
+   #map{
+     height: 50vh;
+   }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+  &__form{
+    .form-group{
+      .form-control{
+        border-right: 1px solid $geyser;
+      }
+    }
+  }
+  }
+}

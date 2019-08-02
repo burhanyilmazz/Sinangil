@@ -1,0 +1,333 @@
+.product-group {
+  background: $rumSwizzle;
+  text-align: center;
+  padding: 135px 0 50px;
+  position: relative;
+
+  .container {
+    > h2 {
+      color: $eastBay;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    > h4 {
+      font-family: "Kalam", cursive;
+      color: $orange;
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0;
+      margin-top: 40px;
+    }
+
+    > p {
+      font-size: 16px;
+      color: $rollingStone;
+    }
+  }
+
+  &__slider {
+    margin: 60px 0 80px;
+    position: relative;
+    background: $rumSwizzle;
+
+    .swiper {
+      &-container {
+        background: $rumSwizzle;
+      }
+      &-button-next {
+        width: 60px;
+        height: 60px;
+        background-image: none;
+        background: $orange;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: -90px;
+        outline: 0;
+
+        &:before {
+          position: absolute;
+          display: inline-block;
+          font-family: "alpa" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\61";
+          color: $white;
+          transform: rotate(-90deg);
+        }
+      }
+
+      &-button-prev {
+        width: 60px;
+        height: 60px;
+        background-image: none;
+        background: $orange;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: -90px;
+        outline: 0;
+
+        &:before {
+          position: absolute;
+          display: inline-block;
+          font-family: "alpa" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\61";
+          color: $white;
+          transform: rotate(90deg);
+        }
+      }
+
+      &-pagination {
+        width: 100%;
+        margin-top: 30px;
+
+        &-bullet {
+          width: 24px;
+          height: 24px;
+          border-radius: 0;
+          opacity: 1;
+          background: url(../images/slider/leaf.png) no-repeat center center;
+          z-index: 2;
+          margin: 0 4px;
+
+          &-active {
+            background: url(../images/slider/leaf-active.png) no-repeat center
+              center;
+          }
+        }
+      }
+    }
+  }
+
+  &__more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      width: 50%;
+      height: 1px;
+      background: $timberwolf;
+      position: absolute;
+      display: block;
+      content: "";
+      left: 70px;
+      z-index: 1;
+    }
+    &:after {
+      width: 50%;
+      height: 1px;
+      background: $timberwolf;
+      position: absolute;
+      display: block;
+      content: "";
+      right: 70px;
+      z-index: 1;
+    }
+
+    a {
+      display: inline-block;
+      background: $orange;
+      color: $white;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 18px 50px;
+      border-radius: 28px;
+      z-index: 2;
+      position: relative;
+
+      &:hover {
+        box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+      }
+
+      &:before {
+        width: 20px;
+        height: 20px;
+        background: $rumSwizzle;
+        position: absolute;
+        display: block;
+        content: "";
+        left: -21px;
+        top: 50%;
+        margin-top: -10px;
+      }
+      &:after {
+        width: 20px;
+        height: 20px;
+        background: $rumSwizzle;
+        position: absolute;
+        display: block;
+        content: "";
+        right: -21px;
+        top: 50%;
+        margin-top: -10px;
+      }
+    }
+  }
+
+  &__line {
+    height: 1px;
+    background: $timberwolf;
+    position: absolute;
+    left: 70px;
+    bottom: 50%;
+    margin-bottom: -113px;
+
+    &--left {
+      width: 10%;
+
+      &:before {
+        width: 1px;
+        height: 337px;
+        background: $timberwolf;
+        position: absolute;
+        display: block;
+        content: "";
+        left: 0;
+        bottom: -336px;
+      }
+    }
+
+    &--right {
+      width: 10%;
+      left: auto;
+      right: 70px;
+
+      &:before {
+        width: 1px;
+        height: 337px;
+        background: $timberwolf;
+        position: absolute;
+        display: block;
+        content: "";
+        right: 0;
+        bottom: -336px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .product-group {
+    &__more-button {
+      &:before {
+        left: 10px;
+      }
+      &:after {
+        right: 10px;
+      }
+    }
+
+    &__line {
+      left: 10px;
+
+      &--left {
+        width: 30px;
+      }
+
+      &--right {
+        width: 30px;
+        right: 10px;
+        left: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .product-group {
+    &__more-button {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+    &__line {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .product-group {
+    .swiper {
+      &-button-next {
+        right: -60px;
+      }
+      &-button-prev {
+        left: -60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product-group {
+    padding: 50px 0;
+
+    .swiper {
+      &-button-next,
+      &-button-prev {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .product-group {
+    &__more-button {
+      &:before,
+      &:after {
+        display: block;
+      }
+    }
+    &__line {
+      display: block;
+      width: calc(100% - 20px);
+
+      &--left {
+        &:before {
+          height: 349px;
+          bottom: -349px;
+        }
+      }
+
+      &--right {
+        &:before {
+          height: 349px;
+          bottom: -349px;
+        }
+      }
+    }
+
+    .swiper {
+      &-container {
+        background: transparent;
+      }
+      &-slide {
+        justify-content: center;
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.quality {
+  text-align: center;
+
+  h3 {
+    color: $orange;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  p {
+    color: $white;
+    font-size: 18px;
+  }
+
+  &__slider {
+    background: url(../images/about/spike.png);
+    border-radius: 5px;
+    position: relative;
+    padding: 70px 0;
+    margin-top: 60px;
+
+    .swiper {
+      &-container {
+        margin: 70px auto;
+      }
+
+      &-button-next {
+        width: 112px;
+        height: 70px;
+        background-image: none;
+        background: transparent;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 90px;
+        outline: 0;
+        border: 1px solid $periwinkleGray;
+
+        &:before {
+          position: absolute;
+          display: inline-block;
+          font-family: "alpa" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\61";
+          color: $periwinkleGray;
+          transform: rotate(-90deg);
+        }
+      }
+
+      &-button-prev {
+        width: 112px;
+        height: 70px;
+        background-image: none;
+        background: transparent;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 90px;
+        outline: 0;
+        border: 1px solid $periwinkleGray;
+
+        &:before {
+          position: absolute;
+          display: inline-block;
+          font-family: "alpa" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\61";
+          color: $periwinkleGray;
+          transform: rotate(90deg);
+        }
+      }
+
+      &-pagination {
+        width: 100%;
+
+        &-bullet {
+          width: 24px;
+          height: 24px;
+          border-radius: 0;
+          opacity: 1;
+          background: url(../images/slider/leaf.png) no-repeat center center;
+          z-index: 2;
+          margin: 0 4px;
+
+          &-active {
+            background: url(../images/slider/leaf-active-orange.png) no-repeat
+              center center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .quality {
+    &__slider {
+      .swiper {
+        &-button-next {
+          right: 10px;
+        }
+        &-button-prev {
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .quality {
+    p {
+      display: none;
+    }
+
+    &__slider {
+      .swiper {
+        &-container {
+          margin: 50px 0;
+        }
+        &-button-next,
+        &-button-prev {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quality {
+    &__slider {
+      .swiper {
+        &-slide {
+          opacity: 0.5;
+          display: flex;
+          justify-content: center;
+          width: 60%;
+          
+          &-active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
