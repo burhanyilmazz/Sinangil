@@ -1,0 +1,80 @@
+.extra {
+  background: $pink;
+  padding: 25px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__box {
+    position: relative;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-width: 200px;
+    }
+
+    &:after {
+      width: 1px;
+      height: 100px;
+      content: "";
+      display: block;
+      position: absolute;
+      background: $vivid;
+      right: 0px;
+      top: 0;
+      opacity: 0.1;
+    }
+
+    &:first-child {
+      a {
+        align-items: flex-start;
+        padding-left: 0;
+      }
+
+      &:after {
+        right: -30px;
+      }
+    }
+
+    &:last-child {
+      a {
+        padding-right: 0;
+        max-width: 150px;
+        min-width: 150px;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    h3 {
+      color: $red;
+      font-size: 40px;
+      font-weight: 700;
+      margin: 0;
+      span {
+        color: $green;
+        font-weight: 500;
+      }
+    }
+
+    h6 {
+      color: $scarpaFlow;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+
+    p {
+      color: $scarpaFlow;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+  }
+}

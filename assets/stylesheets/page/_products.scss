@@ -1,55 +1,16 @@
 .products {
-  background: url(../images/products/bg.png) center top no-repeat;
-  margin-top: 90px;
-  text-align: center;
-  padding-bottom: 70px;
-
-  h1 {
-    font-size: 36px;
-    color: $eastBay;
-    font-weight: 700;
-    margin: 118px 0 20px;
-  }
-
-  h4 {
-    font-size: 28px;
-    color: $orange;
-    font-family: "Kalam", cursive;
-    font-weight: 700;
-    margin: 0;
-  }
-
-  p {
-    font-size: 16px;
-    color: $rollingStone;
-  }
+  
 }
 
 
 @media screen and (max-width: 1024px) {
   .products {
-    background-size: contain;
-
-    h1 {
-      margin-top: 50px;
-    }
-    h4 {
-      margin: 0 0 100px;
-    }
+   
   }
 }
 
 @media screen and (max-width: 768px) {
   .products {
-    background-size: contain;
-
-    h1 {
-      margin-top: 50px;
-      font-size: 36px;
-    }
-    h4 {
-      margin: 0;
-      font-size: 18px;
-    }
+   
   }
 }

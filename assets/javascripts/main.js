@@ -69,67 +69,17 @@ $(document).ready(function() {
         },
         direction: "vertical"
     }),
-    new Swiper(".product-group__slider .swiper-container",{
-        slidesPerView: 4,
+    new Swiper(".recipe-slider__slider .swiper-container",{
+        slidesPerView: 2,
         spaceBetween: 20,
         navigation: {
-            nextEl: ".product-group__slider .swiper-button-next",
-            prevEl: ".product-group__slider .swiper-button-prev"
+            nextEl: ".recipe-slider__slider .swiper-button-next",
+            prevEl: ".recipe-slider__slider .swiper-button-prev"
         },
-        breakpoints: {
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                pagination: {
-                    el: ".product-group__slider .swiper-pagination",
-                    clickable: !0
-                }
-            }
-        }
-    }),
-    new Swiper(".quality__slider .swiper-container",{
-        slidesPerView: 5,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: ".quality__slider .swiper-button-next",
-            prevEl: ".quality__slider .swiper-button-prev"
-        },
-        breakpoints: {
-            1440: {
-                slidesPerView: 4,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 3,
-                pagination: {
-                    el: ".quality__slider .swiper-pagination",
-                    clickable: !0
-                }
-            },
-            768: {
-                slidesPerView: 3,
-                centeredSlides: true,
-                pagination: {
-                    el: ".quality__slider .swiper-pagination",
-                    clickable: !0
-                }
-            },
-            640: {
-                slidesPerView: "auto",
-                centeredSlides: true,
-                pagination: {
-                    el: ".quality__slider .swiper-pagination",
-                    clickable: !0
-                }
-            }
-        }
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+            draggable: true
+          },
     })
 });

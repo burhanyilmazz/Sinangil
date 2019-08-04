@@ -1,70 +1,84 @@
 @font-face {
-  font-family: 'omnes_promedium';
-  src: url('../fonts/omnes/omnes_pro_medium.eot');
-  src: url('../fonts/omnes/omnes_pro_medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/omnes/omnes_pro_medium.woff2') format('woff2'),
-       url('../fonts/omnes/omnes_pro_medium.woff') format('woff'),
-       url('../fonts/omnes/omnes_pro_medium.ttf') format('truetype'),
-       url('../fonts/omnes/omnes_pro_medium.svg#omnes_promedium') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'yummo';
-  src: url('../fonts/yummo/yummo-bold.eot');
-  src: url('../fonts/yummo/yummo-bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/yummo/yummo-bold.woff2') format('woff2'),
-       url('../fonts/yummo/yummo-bold.woff') format('woff'),
-       url('../fonts/yummo/yummo-bold.ttf') format('truetype'),
-       url('../fonts/yummo/yummo-bold.svg#yummobold') format('svg');
+  font-family: 'omnes_pro';
+  src: url('../fonts/omnes/omnes_pro_bold.eot');
+  src: url('../fonts/omnes/omnes_pro_bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/omnes/omnes_pro_bold.woff2') format('woff2'),
+       url('../fonts/omnes/omnes_pro_bold.woff') format('woff'),
+       url('../fonts/omnes/omnes_pro_bold.ttf') format('truetype'),
+       url('../fonts/omnes/omnes_pro_bold.svg#omnes_pro') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'yummo';
-  src: url('../fonts/yummo/yummo-semibold.eot');
-  src: url('../fonts/yummo/yummo-semibold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/yummo/yummo-semibold.woff2') format('woff2'),
-       url('../fonts/yummo/yummo-semibold.woff') format('woff'),
-       url('../fonts/yummo/yummo-semibold.ttf') format('truetype'),
-       url('../fonts/yummo/yummo-semibold.svg#yummosemibold') format('svg');
+  font-family: 'omnes_pro';
+  src: url('../fonts/omnes/omnes_pro_semibold.eot');
+  src: url('../fonts/omnes/omnes_pro_semibold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/omnes/omnes_pro_semibold.woff2') format('woff2'),
+       url('../fonts/omnes/omnes_pro_semibold.woff') format('woff'),
+       url('../fonts/omnes/omnes_pro_semibold.ttf') format('truetype'),
+       url('../fonts/omnes/omnes_pro_semibold.svg#omnes_pro') format('svg');
+  font-weight: 600;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'omnes_pro';
+  src: url('../fonts/omnes/omnes_pro_medium.eot');
+  src: url('../fonts/omnes/omnes_pro_medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/omnes/omnes_pro_medium.woff2') format('woff2'),
+       url('../fonts/omnes/omnes_pro_medium.woff') format('woff'),
+       url('../fonts/omnes/omnes_pro_medium.ttf') format('truetype'),
+       url('../fonts/omnes/omnes_pro_medium.svg#omnes_pro') format('svg');
   font-weight: 500;
   font-style: normal;
 }
 
+
+
 @font-face {
-  font-family: 'yummo';
-  src: url('../fonts/yummo/yummo-regular.eot');
-  src: url('../fonts/yummo/yummo-regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/yummo/yummo-regular.woff2') format('woff2'),
-       url('../fonts/yummo/yummo-regular.woff') format('woff'),
-       url('../fonts/yummo/yummo-regular.ttf') format('truetype'),
-       url('../fonts/yummo/yummo-regular.svg#yummoregular') format('svg');
+  font-family: 'omnes_pro';
+  src: url('../fonts/omnes/omnes_pro_regular.eot');
+  src: url('../fonts/omnes/omnes_pro_regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/omnes/omnes_pro_regular.woff2') format('woff2'),
+       url('../fonts/omnes/omnes_pro_regular.woff') format('woff'),
+       url('../fonts/omnes/omnes_pro_regular.ttf') format('truetype'),
+       url('../fonts/omnes/omnes_pro_regular.svg#omnes_pro') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Kalam:700&display=swap&subset=latin-ext');
-//font-family: 'Kalam', cursive;
+@font-face {
+  font-family: 'arista_pro_bold';
+  src: url('../fonts/arista/aristapro-bold.eot');
+  src: url('../fonts/arista/aristapro-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/arista/aristapro-bold.woff2') format('woff2'),
+       url('../fonts/arista/aristapro-bold.woff') format('woff'),
+       url('../fonts/arista/aristapro-bold.ttf') format('truetype'),
+       url('../fonts/arista/aristapro-bold.svg#arista_pro_bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 
 @charset "UTF-8";
 
 @font-face {
-  font-family: "alpa";
-  src:url("../fonts/alpa/alpa.eot");
-  src:url("../fonts/alpa/alpa.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/alpa/alpa.woff") format("woff"),
-    url("../fonts/alpa/alpa.ttf") format("truetype"),
-    url("../fonts/alpa/alpa.svg#alpa") format("svg");
+  font-family: "sinangil";
+  src:url("../fonts/sinangil/sinangil.eot");
+  src:url("../fonts/sinangil/sinangil.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/sinangil/sinangil.woff") format("woff"),
+      url("../fonts/sinangil/sinangil.ttf") format("truetype"),
+      url("../fonts/sinangil/sinangil.svg#sinangil") format("svg");
   font-weight: normal;
   font-style: normal;
 
 }
 
 [data-icon]:before {
-  font-family: "alpa" !important;
+  font-family: "sinangil" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -78,7 +92,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "alpa" !important;
+  font-family: "sinangil" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -89,6 +103,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow:before {
-  content: "\61";
+.icon-arrow-1:before {
+  content: "\62";
 }

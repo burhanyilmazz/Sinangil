@@ -53,10 +53,16 @@ html {
   }
 }
 
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1290px;
+  }
+}
+
 @media (max-width: 1280px) {
   .container-fluid {
     padding-right: 30px;
-  padding-left: 30px;
+    padding-left: 30px;
   }
 }
 

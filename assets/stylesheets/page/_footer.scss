@@ -1,35 +1,30 @@
 .footer {
-  background: $eastBay;
-  padding-top: 100px;
+  background: $colorF5;
+  padding-top: 70px;
 
   .row + .row {
     margin-top: 70px;
     padding: 20px 0;
+    align-items: center;
 
     &:before {
-      width: calc(100% - 140px);
+      width: 100%;
       height: 1px;
-      background: $white;
+      background: $iron;
       display: block;
       position: absolute;
       content: "";
-      left: 70px;
-      margin-top: -20px;
-      opacity: 0.2;
+      left: 0px;
+      margin-top: -60px;
     }
   }
 
-  h5,
-  h6 {
+  h5 {
     font-size: 18px;
-    font-weight: 700;
-    color: $orange;
+    font-weight: 600;
+    color: $green;
     margin: 0;
-    margin-bottom: 30px;
-  }
-
-  h6 {
-    color: $white;
+    margin-bottom: 20px;
   }
 
   ul {
@@ -40,46 +35,61 @@
 
   &__logo {
     margin-top: 40px;
+    text-align: center;
   }
 
   &__nav {
     li {
       a {
-        color: $white;
+        color: $rollingStone;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 500;
         display: block;
         padding: 9px 0;
 
         &:hover {
-          color: $orange;
+          color: $green;
         }
       }
     }
   }
 
   &__social-media {
-    text-align: right;
+    position: relative;
+    h6 {
+      font-size: 18px;
+      font-weight: 600;
+      color: $green;
+      margin: 0;
+      position: absolute;
+      transform: rotate(-90deg);
+      width: 140px;
+      right: 0;
+      top: 50px;
+    }
 
     ul {
       display: flex;
       justify-content: flex-end;
+      flex-direction: column;
 
       li {
-        margin-left: 16px;
+        margin-bottom: 20px;
+        display: inline-block;
+        text-align: right;
 
         a {
-          display: flex;
+          display: inline-flex;
           justify-content: center;
           align-items: center;
           width: 40px;
           height: 40px;
           border-radius: 100%;
-          background: $waikawaGray;
+          background: $iron;
           color: $white;
 
           &:hover {
-            color: $orange;
+            background: $green;
           }
         }
       }
@@ -87,36 +97,46 @@
   }
 
   &__legal {
-    font-weight: 700;
-    text-align: right;
-    margin-top: 50px;
+    font-weight: 500;
+    margin-top: 80px;
 
     li {
-      margin-top: 30px;
+      border-top: 1px solid $iron;
       a {
-        color: $white;
-        opacity: 0.5;
+        color: $rollingStone;
         font-size: 14px;
-        &:hover {
-          opacity: 1;
-        }
+        padding: 20px 15px;
+        display: block;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $iron;
       }
     }
   }
 
   &__copyright {
-    color: $cadetBlue;
+    color: $rollingStone;
     font-size: 14px;
     line-height: 18px;
 
     span {
-      color: $orange;
+      color: $darkblue;
+    }
+
+    i {
+      font-style: normal;
+      color: $red;
     }
   }
 
   .gercek-dusler {
-    text-align: right;
-    margin-top: 30px;
+    a {
+      background: $green;
+      display: inline-block;
+      padding: 30px;
+      float: right;
+    }
   }
 }
 
@@ -136,8 +156,8 @@
     padding-top: 10px;
     text-align: center;
 
-    &__logo{
-      img{
+    &__logo {
+      img {
         width: 80px;
       }
     }
@@ -149,26 +169,28 @@
       }
     }
 
-    &__nav, h5{
+    &__nav,
+    h5 {
       display: none;
     }
 
-    &__social-media, .gercek-dusler{
+    &__social-media,
+    .gercek-dusler {
       text-align: center;
 
-      ul{
+      ul {
         justify-content: center;
       }
     }
 
-    &__legal{
+    &__legal {
       text-align: center;
       margin-top: 30px;
 
-      ul{
+      ul {
         justify-content: center;
 
-        li{
+        li {
           margin-top: 10px;
         }
       }
