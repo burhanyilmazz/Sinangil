@@ -70,8 +70,9 @@ $(document).ready(function() {
         direction: "vertical"
     }),
     new Swiper(".recipe-slider__slider .swiper-container",{
-        slidesPerView: 2,
-        spaceBetween: 20,
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        loop: true,
         navigation: {
             nextEl: ".recipe-slider__slider .swiper-button-next",
             prevEl: ".recipe-slider__slider .swiper-button-prev"

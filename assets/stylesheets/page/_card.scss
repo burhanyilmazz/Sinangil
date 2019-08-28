@@ -1,7 +1,72 @@
 .card {
-  
+	position: relative;
+	
+	&__more {
+    padding: 10px 30px 10px 20px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background: $pink;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    color: $rollingStone;
+
+    &:after {
+      font-family: "sinangil" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\62";
+      margin-top: 8px;
+      margin-left: 20px;
+    }
+  }
+
+  &--small {
+    padding: 35px;
+    background: $white;
+    border-radius: 20px;
+		overflow: hidden;
+		width: 560px;
+		box-shadow: -14px 14px 24px 0px rgba(0,0,0,0.17);
+
+    h4 {
+      font-size: 18px;
+      margin: 0;
+      color: $red;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: $darkblue;
+      font-size: 30px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    figure {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+
+    p {
+      color: $rollingStone;
+      font-size: 16px;
+			font-weight: 500;
+			width: 60%;
+		}
+		
+		.card__more{
+			margin-top: 80px;
+		}
+  }  
 }
 
 @media screen and (max-width: 640px) {
-  
 }

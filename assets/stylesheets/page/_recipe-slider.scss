@@ -68,37 +68,145 @@
         font-weight: 600;
       }
     }
-	}
-	
-	&__more-button{
-		padding: 10px 30px 10px 20px;
-		border-radius: 20px;
-		border-top-left-radius: 5px;
-		background: $linkWater;
-		display: inline-flex;
-		align-items: center;
-		font-weight: 600;
-		color: $darkblue;
-		
+  }
 
-		&:after{
-			font-family: "sinangil" !important;
-		font-style: normal !important;
-		font-weight: normal !important;
-		font-variant: normal !important;
-		text-transform: none !important;
-		speak: none;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-			content: "\62";
-			margin-top: 8px;
-			margin-left: 20px;
-		}
-	}
+  &__more-button {
+    padding: 10px 30px 10px 20px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background: $linkWater;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    color: $darkblue;
+
+    &:after {
+      font-family: "sinangil" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\62";
+      margin-top: 8px;
+      margin-left: 20px;
+    }
+  }
 
   &__slider {
     width: 50%;
     position: relative;
+    margin-top: -50px;
+
+    .swiper {
+      &-wrapper {
+        padding: 50px 0 50px 50px;
+      }
+
+      &-slide {
+        width: 70%;
+        opacity: 0.5;
+
+        &-active {
+          opacity: 1;
+        }
+      }
+
+      &-button {
+        &-prev {
+          width: 80px;
+          height: 40px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $poloBlue;
+          border: 2px solid $poloBlue;
+          box-sizing: border-box;
+          top: auto;
+          bottom: 0;
+          left: 50px;
+
+          &:after {
+            font-family: "sinangil" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\62";
+            margin-top: -8px;
+            transform: rotate(180deg);
+          }
+        }
+
+        &-next {
+          width: 80px;
+          height: 40px;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $poloBlue;
+          border: 2px solid $poloBlue;
+          box-sizing: border-box;
+          top: auto;
+          right: auto;
+          bottom: 0;
+          left: 530px;
+
+          &:after {
+            font-family: "sinangil" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\62";
+            margin-top: 8px;
+          }
+        }
+      }
+
+      &-scrollbar {
+        height: 30px;
+        width: 400px;
+        margin-left: 130px;
+        margin-bottom: 5px;
+        background: transparent;
+        position: relative;
+        
+        &:before{
+          width: 100%;
+          height: 2px;
+          background: $poloBlue;
+          display: block;
+          position: absolute;
+          content: '';
+          top: 50%;
+          margin-top: -1px;
+        }
+
+        &-drag{
+          background: url(../images/icons/drag.png) center center $poloBlue no-repeat;
+          padding: 0 10px;
+          height: 30px;
+          border-radius: 15px;
+        }
+      }
+    }
   }
 }
