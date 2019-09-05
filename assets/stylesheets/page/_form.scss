@@ -1,0 +1,26 @@
+.btn {
+  padding: 25px;
+  display: block;
+  color: $white;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgb(228, 1, 52);
+  background: linear-gradient(
+    -90deg,
+    rgba(228, 1, 52, 1) 0%,
+    rgba(255, 32, 82, 1) 100%
+  );
+  border-radius: 40px;
+  @include transition(0.5s);
+  box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background: linear-gradient(
+      -90deg,
+      rgba(228, 1, 52, 1) 0%,
+      rgba(228, 1, 52, 1) 100%
+    );
+  }
+}

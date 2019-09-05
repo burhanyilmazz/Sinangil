@@ -1,22 +1,46 @@
 .about {
-  
-}
+  &-head {
+    margin-top: 110px;
+    background: url(../images/about/bg.jpg) no-repeat center top;
+    background-size: cover;
+    position: relative;
 
-@media screen and (max-width: 1024px) {
-  .about {
-    
-  }
-}
+    .container {
+      position: relative;
+      height: calc(100vh - 110px);
+    }
 
-@media screen and (max-width: 1024px) {
-  .about {
-   
-  }
-}
+    .breadcrumb {
+      position: absolute;
+      top: 108px;
+      left: 0;
+    }
 
+    &__title {
+      text-align: center;
+      margin-top: 10%;
+    }
 
-@media screen and (max-width: 640px) {
-  .about {
-   
+    &__table {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .scroll {
+      width: 40px;
+      height: 66px;
+      background: url(../images/icons/scroll-w.png) no-repeat center center;
+      left: 50%;
+      margin-left: -20px;
+      top: 50%;
+      margin-top: -33px;
+      bottom: auto;
+      right: auto;
+
+      &:before {
+        top: 10px;
+        left: 20px;
+      }
+    }
   }
 }

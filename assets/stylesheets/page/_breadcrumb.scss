@@ -1,0 +1,47 @@
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  li {
+    font-size: 12px;
+    font-weight: 500;
+    color: $darkblue;
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      width: 4px;
+      height: 4px;
+      display: block;
+      content: "";
+      border-radius: 100%;
+			background: $blueHaze;
+			@include transition(0.5s);
+      margin-right: 18px;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    a {
+      color: $blueHaze;
+    }
+
+    &:last-child,
+    &:hover {
+      &:before {
+        background: $darkblue;
+      }
+      a {
+        color: $darkblue;
+      }
+    }
+  }
+}

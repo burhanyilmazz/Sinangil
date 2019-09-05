@@ -18,6 +18,7 @@ gulp.task("scripts", function() {
       "./assets/javascripts/jquery-3.3.1.min.js",
       "./assets/javascripts/3rdParty/jquery.fancybox.min.js",
       "./assets/javascripts/3rdParty/swiper.min.js",
+      "./assets/javascripts/3rdParty/select2.js",
       "./assets/javascripts/main.js"
     ])
     .pipe(concat("master.js"))

@@ -83,4 +83,30 @@ $(document).ready(function() {
             draggable: true
           },
     })
+
+    new Swiper(".quality-slider__slider .swiper-container",{
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        loop: true,
+        navigation: {
+            nextEl: ".quality-slider__slider .swiper-button-next",
+            prevEl: ".quality-slider__slider .swiper-button-prev"
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+            draggable: true
+          },
+    })
+
+    $(".select2").select2();
+
+    $(".tabs__menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("tabs__menu--active");
+        $(this).parent().siblings().removeClass("tabs__menu--active");
+        var tab = $(this).attr("href");
+        $(".tabs__container > div").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
 });
