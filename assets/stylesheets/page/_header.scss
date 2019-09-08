@@ -11,6 +11,7 @@ $headerHeight: 110px;
   &__logo {
     position: absolute;
     top: 0;
+    z-index: 9;
 
     img {
       max-width: 100%;

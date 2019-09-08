@@ -1,0 +1,75 @@
+.nav-left {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 40px;
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $rollingStone;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    margin: 10px 0;
+
+    &:before {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      content: "\f067";
+      margin-right: 20px;
+      color: #c9ccdb;
+      @include transition(0.5s);
+    }
+
+    &:hover {
+      color: $red;
+      &:before {
+        color: $red;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 30px;
+    display: none;
+
+    a {
+      &::before {
+        content: "\f068";
+      }
+
+      &:hover {
+        color: $darkblue;
+        &:before {
+          color: $darkblue;
+        }
+      }
+    }
+  }
+
+  &--open {
+    > a {
+      color: $red;
+      &:before {
+        color: $red;
+      }
+    }
+    ul {
+      display: block;
+    }
+  }
+
+  &--active {
+    > a {
+      color: $darkblue;
+      &:before {
+        color: $darkblue;
+      }
+    }
+  }
+}

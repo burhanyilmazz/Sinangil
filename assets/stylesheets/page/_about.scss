@@ -1,4 +1,22 @@
 .about {
+  p {
+		color: $darkblue;
+		font-size: 18px;
+    font-weight: 500;
+    margin-top: 80px;
+    line-height: 28px;
+	}
+
+	p + p{
+    margin-top: 30px;
+    font-weight: 400;
+    color: $rollingStone;
+  }
+  
+  figure{
+    margin-bottom: 40px;
+  }
+  
   &-head {
     margin-top: 110px;
     background: url(../images/about/bg.jpg) no-repeat center top;

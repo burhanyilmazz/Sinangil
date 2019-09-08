@@ -1,0 +1,131 @@
+.quality-slider {
+	position: relative;
+	margin-top: 70px;
+	
+  &__img {
+    position: relative;
+    z-index: 2;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    z-index: 1;
+    padding: 117px 0 50px;
+    top: -50px;
+    border-top-left-radius: 20px;
+    height: calc(100% + 50px);
+    width: calc(100vw - 30%);
+    right: 0;
+    background: rgb(232, 232, 232);
+    background: linear-gradient(
+      90deg,
+      rgba(232, 232, 232, 1) 0%,
+      rgba(254, 254, 254, 1) 100%
+    );
+    padding-left: 17%;
+
+    > h3 {
+      font-size: 50px;
+      color: $darkblue;
+      font-weight: 600;
+      margin: 0;
+
+      span {
+        color: $red;
+      }
+    }
+
+    > p {
+      font-weight: 600;
+      font-size: 15px;
+      color: $rollingStone;
+    }
+
+    .swiper {
+      &-container {
+				padding: 30px;
+				margin-left: -30px;
+      }
+      &-slide {
+        width: 230px;
+			}
+			
+			&-button {
+        &-prev {
+          width: 80px;
+          height: 40px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $poloBlue;
+          border: 2px solid $poloBlue;
+          box-sizing: border-box;
+          top: auto;
+          bottom: 50px;
+					left: calc(17% + 90px);
+					
+					&:focus{
+						outline: 0;
+					}
+
+          &:after {
+            font-family: "sinangil" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\62";
+            margin-top: -8px;
+            transform: rotate(180deg);
+          }
+        }
+
+        &-next {
+          width: 80px;
+          height: 40px;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $poloBlue;
+          border: 2px solid $poloBlue;
+          box-sizing: border-box;
+          top: auto;
+          right: auto;
+          bottom: 50px;
+					left: calc(17% + 168px);
+					
+					&:focus{
+						outline: 0;
+					}
+
+          &:after {
+            font-family: "sinangil" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\62";
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}

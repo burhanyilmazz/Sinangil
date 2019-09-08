@@ -4,6 +4,8 @@
   list-style: none;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 9;
 
   li {
     font-size: 12px;

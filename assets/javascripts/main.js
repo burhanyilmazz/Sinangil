@@ -78,7 +78,22 @@ $(document).ready(function() {
             prevEl: ".recipe-slider__slider .swiper-button-prev"
         },
         scrollbar: {
-            el: '.swiper-scrollbar',
+            el: '.recipe-slider__slider .swiper-scrollbar',
+            hide: false,
+            draggable: true
+          },
+    })
+
+    new Swiper(".product-recipe__slider .swiper-container",{
+        slidesPerView: 3,
+        spaceBetween: 40,
+        loop: true,
+        navigation: {
+            nextEl: ".product-recipe__slider .swiper-button-next",
+            prevEl: ".product-recipe__slider .swiper-button-prev"
+        },
+        scrollbar: {
+            el: '.product-recipe__slider .swiper-scrollbar',
             hide: false,
             draggable: true
           },
@@ -86,17 +101,12 @@ $(document).ready(function() {
 
     new Swiper(".quality-slider__slider .swiper-container",{
         slidesPerView: 'auto',
-        spaceBetween: 40,
+        spaceBetween: 55,
         loop: true,
         navigation: {
             nextEl: ".quality-slider__slider .swiper-button-next",
             prevEl: ".quality-slider__slider .swiper-button-prev"
-        },
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            hide: false,
-            draggable: true
-          },
+        }
     })
 
     $(".select2").select2();
