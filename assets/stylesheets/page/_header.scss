@@ -6,7 +6,8 @@ $headerHeight: 110px;
   top: 0;
   left: 0;
   z-index: 99;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background: $white;
+  box-sizing: border-box;
 
   &__logo {
     position: absolute;
@@ -38,7 +39,7 @@ $headerHeight: 110px;
       position: absolute;
       right: 0;
       top: 30px;
-      background: rgba(255, 255, 255, 0.3);
+      background: $osloGrey//rgba(255, 255, 255, 0.3);
     }
 
     li {
@@ -46,7 +47,7 @@ $headerHeight: 110px;
       display: flex;
       align-items: center;
       a {
-        color: $white;
+        color: $osloGrey;
         padding: 0 13px;
         display: flex;
         justify-content: center;
@@ -78,7 +79,7 @@ $headerHeight: 110px;
         justify-content: center;
         align-items: center;
         background: $darkblue;
-        color: $white;
+        color: $white !important;
         height: $headerHeight;
         position: relative;
         padding: 0 !important;
@@ -134,7 +135,7 @@ $headerHeight: 110px;
 
   &__calendar {
     a {
-      color: $white;
+      color: $osloGrey;
       position: relative;
       font-size: 14px;
       font-weight: 500;
@@ -146,7 +147,7 @@ $headerHeight: 110px;
         position: relative;
         content: "";
         display: block;
-        background: url(../images/icons/calendar.png) no-repeat;
+        background: url(../images/icons/calendar-h.png) no-repeat;
         width: 24px;
         height: 24px;
         margin-right: 5px;
@@ -154,18 +155,35 @@ $headerHeight: 110px;
     }
   }
 
-  &__professional{
-    a{
+  &__professional {
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid $osloGrey; //rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 152px;
+    height: 43px;
+
+    &:before {
+      width: 117px;
+      height: 14px;
+      content: "";
       display: block;
-      padding: 14px;
-      background: rgba(255, 255, 255, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 30px;
+      background: url(../images/icons/prof-h.png) no-repeat center center;
     }
   }
 
   &__language {
     position: relative;
+
+    > a {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: inline-block;
+      padding: 6px 6px 4px;
+      border-radius: 50%;
+    }
 
     select {
       display: none;
@@ -237,10 +255,90 @@ $headerHeight: 110px;
     }
   }
 
+  &--home {
+    background: transparent;
+    border-bottom: 1px solid $white;
+
+    .header {
+      &__nav {
+        &:after {
+          background: rgba(255, 255, 255, 0.3);
+        }
+
+        li {
+          a {
+            color: $white;
+
+            &:hover {
+              color: $darkblue;
+            }
+          }
+        }
+      }
+
+      &__calendar {
+        a {
+          color: $white;
+
+          &:before {
+            background: url(../images/icons/calendar.png) no-repeat;
+          }
+        }
+      }
+
+      &__professional {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:before {
+          background: url(../images/icons/prof.png) no-repeat center center;
+        }
+      }
+    }
+
+    &.header--shrink {
+      .header {
+        &__nav {
+          &:after {
+            background: $osloGrey;
+          }
+
+          li {
+            a {
+              color: $osloGrey;
+
+              &:hover{
+                color: $darkblue;
+              }
+            }
+          }
+        }
+
+        &__calendar {
+          a {
+            color: $osloGrey;
+
+            &:before {
+              background: url(../images/icons/calendar-h.png) no-repeat;
+            }
+          }
+        }
+
+        &__professional {
+          border: 1px solid $osloGrey;
+
+          &:before {
+            background: url(../images/icons/prof-h.png) no-repeat center center;
+          }
+        }
+      }
+    }
+  }
+
   &--shrink,
   &--open {
-    background: $darkblue;
+    background: $white;
     @include transition(0.5s);
+    border: 0px;
   }
 
   &__mobile-nav,
@@ -251,9 +349,17 @@ $headerHeight: 110px;
 
 @media screen and (max-width: 1366px) {
   .header {
-    &__dropdown {
-      ul {
-        padding-left: 80px;
+    &__nav{
+      li {
+        a{
+          padding: 0 6px;
+        }
+      }
+
+      &--dropdown{
+        > a {
+          width: 120px;
+        }
       }
     }
   }
@@ -261,25 +367,7 @@ $headerHeight: 110px;
 
 @media screen and (max-width: 1280px) {
   .header {
-    &__logo {
-      padding-left: 20px;
-    }
-
-    &__nav {
-      li {
-        a {
-          padding: 0 20px;
-        }
-      }
-    }
-
-    &__dropdown {
-      width: 100%;
-      left: 0;
-      ul {
-        padding-left: 40px;
-      }
-    }
+    
   }
 }
 

@@ -107,7 +107,7 @@
       }
 
       &-slide {
-        width: 70%;
+        width: 640px;
         opacity: 0.5;
 
         &-active {
@@ -217,5 +217,13 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .recipe-slider {
+   &__slider{
+     width: 70%;
+   }
   }
 }

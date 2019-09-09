@@ -62,3 +62,14 @@
     }
   }
 }
+
+
+@media screen and (max-width: 1366px) {
+  .about {
+   &-head{
+     .scroll{
+       margin-top: 150px;
+     }
+   }
+  }
+}
