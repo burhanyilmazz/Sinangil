@@ -120,3 +120,14 @@ $(document).ready(function() {
         $(tab).fadeIn();
     });
 });
+
+window.onload = function() {
+	lax.setup() // init
+
+	var updateLax = function() {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+
+	window.requestAnimationFrame(updateLax)
+}
