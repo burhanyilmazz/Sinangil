@@ -109,6 +109,21 @@ $(document).ready(function() {
         }
     })
 
+    new Swiper(".recipe-preparation__slider .swiper-container",{
+        slidesPerView: 3,
+        spaceBetween: 40,
+        loop: true,
+        navigation: {
+            nextEl: ".recipe-preparation__slider .swiper-button-next",
+            prevEl: ".recipe-preparation__slider .swiper-button-prev"
+        },
+        scrollbar: {
+            el: '.recipe-preparation__slider .swiper-scrollbar',
+            hide: false,
+            draggable: true
+          },
+    })
+
     $(".select2").select2();
 
     $(".tabs__menu a").click(function(event) {
