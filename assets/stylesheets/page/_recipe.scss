@@ -1,7 +1,7 @@
 .recipe {
-	background: url(../images/recipe/r1.png) no-repeat center top  $blackSqueeze;
-	position: relative;
-	padding-bottom: 100px;
+  background: url(../images/recipe/r1.png) no-repeat center top $blackSqueeze;
+  position: relative;
+  padding-bottom: 100px;
 
   &-head {
     margin-top: 110px;
@@ -56,26 +56,412 @@
     &--2 {
       top: 0px;
       left: 0;
-		}
-		
-		&--3 {
+    }
+
+    &--3 {
       top: 0px;
       right: 0;
-		}
-		
-		&--4 {
+    }
+
+    &--4 {
       top: 24%;
       left: 10%;
-		}
+    }
 
-		&--5 {
+    &--5 {
       bottom: -170px;
       left: 5%;
-		}
+    }
 
-		&--6 {
+    &--6 {
       top: 22%;
       right: 10%;
-		}
+    }
+  }
+
+  &__detail {
+    margin-top: 110px;
+    background: $blackSqueeze;
+  }
+
+  &-detail {
+    &__image {
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: inherit;
+      }
+    }
+
+    &__content {
+      padding: 50px;
+
+      h4 {
+        font-size: 14px;
+        color: $red;
+        margin: 60px 0 0;
+      }
+
+      h1 {
+        color: $darkblue;
+        font-size: 50px;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      i {
+        transform: rotate(90deg);
+        display: inline-block;
+        color: $red;
+        margin: 40px 0;
+
+        &:after {
+          font-family: "sinangil" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\62";
+          transform: rotate(-90deg);
+        }
+      }
+
+      p {
+        color: $osloGrey;
+        font-size: 16px;
+        line-height: 24px;
+
+        span {
+          color: $red;
+        }
+      }
+    }
+
+    &__box {
+      border-radius: 20px;
+      background: $white;
+      box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 200px;
+
+      h5,
+      h6 {
+        font-size: 14px;
+        color: $red;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      h6 {
+        color: $osloGrey;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      z-index: 1;
+
+      img {
+        display: inherit;
+        max-height: 100%;
+      }
+
+      &--1 {
+        left: 0;
+        top: 0;
+      }
+
+      &--2 {
+        right: 0;
+        bottom: 0;
+      }
+
+      &--3 {
+        left: 20px;
+        bottom: -200px;
+      }
+
+      &--4 {
+        right: 0px;
+        top: -50px;
+      }
+
+      &--5 {
+        left: 50%;
+        margin-left: -100px;
+        top: 0px;
+      }
+
+      &--6 {
+        right: 0px;
+        top: 50%;
+        margin-top: -80px;
+      }
+    }
+  }
+
+  &-material {
+    background: #deeafa;
+    padding: 80px 0;
+    position: relative;
+
+    h2 {
+      color: $red;
+      margin: 0;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &__box {
+      border-radius: 10px;
+      background: $white;
+      box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+      height: 120px;
+      box-sizing: border-box;
+      margin: 15px 0;
+      padding: 20px;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+
+      figure {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      span {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        width: calc(100% - 100px);
+        font-size: 16px;
+        color: $osloGrey;
+        position: relative;
+
+        &:before {
+          width: 1px;
+          height: 100px;
+          position: absolute;
+          left: -10px;
+          top: 0px;
+          background: #eff0f4;
+          content: "";
+        }
+      }
+    }
+  }
+
+  &-preparation {
+    background: $white;
+    position: relative;
+
+    h2 {
+      color: $darkblue;
+      display: flex;
+      align-items: flex-end;
+      font-weight: 600;
+      margin: 0;
+      margin-top: 35px;
+
+      &:before {
+        width: 69px;
+        height: 71px;
+        display: block;
+        content: "";
+        background: url(../images/icons/recipe.png) no-repeat;
+        margin-left: 10px;
+      }
+    }
+
+    h5 {
+      color: $darkblue;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: $osloGrey;
+      font-size: 14px;
+      margin-top: 30px;
+
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          width: 20px;
+          height: 6px;
+          content: "";
+          background: $red;
+          border-radius: 3px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &__info {
+      background: #ceecf8;
+      padding: 20px;
+      margin-top: 60px;
+
+      h5 {
+        margin: 0;
+      }
+
+      p {
+        color: $osloGrey;
+        font-size: 14px;
+      }
+    }
+
+    &__slider {
+      background: $blackSqueeze;
+      padding: 0 50px 80px 50px;
+      position: absolute;
+      top: 0;
+      width: calc((100% / 12) * 6);
+      right: 0;
+      height: 100%;
+
+      p {
+        color: $rollingStone;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .swiper {
+        &-container {
+          margin-bottom: 20px;
+        }
+
+        &-slide {
+          width: 300px !important;
+        }
+
+        &-button {
+          &-prev {
+            width: 80px;
+            height: 40px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $poloBlue;
+            border: 2px solid $poloBlue;
+            box-sizing: border-box;
+            top: 16px;
+            position: relative;
+            float: left;
+            left: 0;
+
+            &:focus {
+              outline: 0;
+            }
+
+            &:after {
+              font-family: "sinangil" !important;
+              font-style: normal !important;
+              font-weight: normal !important;
+              font-variant: normal !important;
+              text-transform: none !important;
+              speak: none;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              content: "\62";
+              margin-top: -8px;
+              transform: rotate(180deg);
+            }
+          }
+
+          &-next {
+            width: 80px;
+            height: 40px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $poloBlue;
+            border: 2px solid $poloBlue;
+            box-sizing: border-box;
+            top: 16px;
+            right: auto;
+            position: relative;
+            float: left;
+
+            &:focus {
+              outline: 0;
+            }
+
+            &:after {
+              font-family: "sinangil" !important;
+              font-style: normal !important;
+              font-weight: normal !important;
+              font-variant: normal !important;
+              text-transform: none !important;
+              speak: none;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              content: "\62";
+              margin-top: 8px;
+            }
+          }
+        }
+
+        &-scrollbar {
+          height: 30px;
+          width: 400px;
+          margin-bottom: 5px;
+          background: transparent;
+          position: relative;
+          float: left;
+
+          &:before {
+            width: 100%;
+            height: 2px;
+            background: $poloBlue;
+            display: block;
+            position: absolute;
+            content: "";
+            top: 50%;
+            margin-top: -1px;
+          }
+
+          &-drag {
+            background: url(../images/icons/drag.png) center center $poloBlue
+              no-repeat;
+            padding: 0 10px;
+            height: 30px;
+            border-radius: 15px;
+            box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
   }
 }

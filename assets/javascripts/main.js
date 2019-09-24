@@ -110,7 +110,7 @@ $(document).ready(function() {
     })
 
     new Swiper(".recipe-preparation__slider .swiper-container",{
-        slidesPerView: 3,
+        slidesPerView: "auto",
         spaceBetween: 40,
         loop: true,
         navigation: {

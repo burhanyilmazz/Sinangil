@@ -284,17 +284,75 @@
     }
   }
 
-  &--product-detail{
+  &--product-detail {
     background: $white;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);    
+    box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
     height: 210px;
     overflow: hidden;
 
-    figure{
+    figure {
       border-radius: 20px;
       overflow: hidden;
+    }
+  }
+
+  &--recipe-detail {
+    background: $white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
+    margin-bottom: 60px;
+
+    &:before {
+      position: absolute;
+      width: 120px;
+      height: 60px;
+      bottom: -34px;
+      left: 50%;
+      margin-left: -60px;
+      background: url(../images/cards/protrusion.png) center bottom no-repeat;
+      content: "";
+    }
+
+    a:focus {
+      outline: 0;
+    }
+
+    figure {
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+
+      img {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+
+    h6 {
+      color: $darkblue;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 20px 0 10px;
+      text-align: center;
+    }
+
+    span {
+      color: $white;
+      background: $red;
+      display: block;
+      font-size: 18px;
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      margin-left: -19px;
+      bottom: -20px;
     }
   }
 }
