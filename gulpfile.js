@@ -42,13 +42,13 @@ gulp.task("scripts", function() {
 gulp.task("sass", function() {
   gulp
     .src(["./assets/stylesheets/main.scss"])
-    //.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sassGlob())
-    .pipe(sass({ outputStyle: "compressed" }))
+    .pipe(sass.sync({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(autoprefixer("last 15 version"))
     .pipe(concat("style.css"))
     .pipe(rename("style.min.css"))
-    //.pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("./assets/css"));
 });
 

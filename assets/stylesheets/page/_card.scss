@@ -150,6 +150,30 @@
     }
   }
 
+  &--newspaper {
+    width: 210px;
+    margin-left: 50px;
+    padding: 20px;
+    min-height: auto;
+    text-align: center;
+    padding-bottom: 40px;
+
+    figure {
+      display: flex;
+      border: 1px solid $blackSqueeze;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    span {
+      margin-top: 8px;
+    }
+  }
+
   &--certificate {
     background: $white;
     width: 230px;

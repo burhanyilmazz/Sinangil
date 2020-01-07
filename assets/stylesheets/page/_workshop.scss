@@ -1,0 +1,36 @@
+.workshop {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background: url(../images/workshop/bg.png) right bottom no-repeat $blackSqueeze;
+  padding-top: 210px;
+
+  &__content {
+    width: 50%;
+  }
+
+  figure{
+    margin-top: 65px;
+  }
+
+  h1 {
+    font-size: 40px;
+    color: $toreaBay;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    color: $osloGrey;
+  }
+
+  .btn {
+    display: inline-block;
+    padding-right: 55px;
+    padding-left: 55px;
+    margin-top: 40px;
+  }
+
+}

@@ -1,0 +1,118 @@
+.share-page {
+  background: $blackSqueeze;
+  position: relative;
+  padding: 110px 0 100px;
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+  }
+
+  .breadcrumb {
+    margin: 100px 0 90px;
+  }
+
+  h1 {
+    font-size: 72px;
+    color: $darkblue;
+    margin: 0;
+  }
+
+  span {
+    color: $red;
+  }
+
+  p {
+    font-size: 16px;
+    color: $osloGrey;
+    margin-bottom: 100px;
+  }
+
+  figure {
+    display: flex;
+    margin-bottom: 30px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      @include transition(0.5s);
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 1;
+
+    &--2 {
+      top: 0px;
+      left: 0;
+    }
+
+    &--3 {
+      top: 0px;
+      right: 0;
+    }
+
+    &--4 {
+      top: 24%;
+      left: 10%;
+    }
+
+    &--5 {
+      bottom: -170px;
+      left: 5%;
+    }
+
+    &--6 {
+      top: 22%;
+      right: 0;
+    }
+  }
+
+  &__instagram {
+    position: absolute;
+    right: -33%;
+    top: 0;
+    border-radius: 60px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $red;
+    height: 613px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background: $blackSqueeze;
+  }
+
+  &-instagram {
+    &__title{
+      color: $darkblue;
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 30px;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 130px;
+      left: -20px;
+    }
+
+    &__text {
+      color: $darkblue;
+      font-weight: 500;
+      font-size: 22px;
+      transform: rotate(-90deg);
+      margin-bottom: 160px;
+    }
+  }
+}
