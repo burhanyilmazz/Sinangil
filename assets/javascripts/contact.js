@@ -121,18 +121,14 @@
     }
   };
 
-  var mapElement = document.getElementById("map");
+  var mapElement = document.getElementById("maps");
   var map = new google.maps.Map(mapElement, mapOptions);
-  var image = "assets/images/contact/pin.png";
+  var image = "assets/images/icons/mappin.png";
   var myLatLng = new google.maps.LatLng(41.020121,29.0452943);
   var beachMarker = new google.maps.Marker({
     position: myLatLng,
     map: map,
     icon: image
-  });
-
-  beachMarker.addListener('click', function() {
-    window.open("https://goo.gl/maps/mx7db7xtuQmu2MUR6")
   });
 
   map.mapTypes.set("styled_map", styledMapType);

@@ -1,0 +1,204 @@
+.gluten-free {
+  &--page {
+    height: auto !important;
+    padding-top: 250px;
+    background-image: none !important;
+    padding-bottom: 950px;
+
+    .row {
+      height: auto !important;
+    }
+
+    h3 {
+      margin-top: 25px !important;
+    }
+
+    .gluten-free{
+      &__img {
+        &--human {
+          top: 170px !important;
+    
+          &-bg {
+            background: #d0e7c4;
+            width: 122px;
+            border-radius: 61px;
+            z-index: 7 !important;
+    
+            &-1 {
+              height: 600px;
+              top: 330px;
+              right: 700px;
+            }
+    
+            &-2 {
+              height: 290px;
+              top: 0px;
+              right: 550px;
+            }
+    
+            &-3 {
+              height: 780px;
+              top: 450px;
+              right: 550px;
+            }
+    
+            &-4 {
+              height: 600px;
+              top: 160px;
+              right: 390px;
+            }
+          }
+        }
+      } 
+    }
+  }
+  
+
+  &__more-button {
+    padding: 10px 30px 10px 20px;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    background: $linkWater;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    color: $darkblue;
+    margin-top: 83px;
+
+    &:after {
+      font-family: "sinangil" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\62";
+      margin-top: 8px;
+      margin-left: 20px;
+    }
+  }
+
+  &-what {
+    position: absolute;
+    z-index: 6;
+    background: $white;
+    width: 60vw;
+    margin-top: 120px;
+    padding: 100px 0;
+
+    .content {
+      margin-left: 30px;
+      width: 60%;
+
+      @media (min-width: 576px) {
+        margin-left: calc(180px + ((100vw - 576px) / 2));
+      }
+
+      @media (min-width: 768px) {
+        margin-left: calc(180px + ((100vw - 768px) / 2));
+      }
+
+      @media (min-width: 992px) {
+        margin-left: calc(180px + ((100vw - 960px) / 2));
+      }
+
+      @media (min-width: 1200px) {
+        margin-left: calc(180px + ((100vw - 1140px) / 2));
+      }
+
+      @media (min-width: 1366px) {
+        margin-left: calc(180px + ((100vw - 1290px) / 2));
+      }
+
+      @media (min-width: 1680px) {
+        margin-left: calc(180px + ((100vw - 1630px) / 2));
+      }
+
+      blockquote {
+        margin: 85px 0;
+
+        h2 {
+          margin: 0;
+          font-weight: 600;
+          color: $red;
+          font-size: 36px;
+
+          span {
+            color: #0a2777;
+          }
+        }
+
+        p {
+          color: #70797e;
+          font-size: 16px;
+          margin: 0;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  &-products {
+    position: relative;
+    z-index: 2;
+    background: url(../images/gluten-free/productbg.png) no-repeat right top
+      #4b8d55;
+    padding-top: 820px;
+    padding-bottom: 200px;
+
+    .card--recipe {
+      width: 300px;
+      position: absolute;
+      top: 130px;
+      right: 150px;
+    }
+
+    &__img {
+      position: absolute;
+      z-index: 8;
+
+      &--1 {
+        right: 480px;
+        top: 480px;
+      }
+
+      &--2 {
+        right: 0px;
+        top: 510px;
+      }
+    }
+
+    &__text {
+      text-align: center;
+
+      h2 {
+        color: #0a2777;
+        font-size: 36px;
+        font-weight: 600;
+        margin: 0;
+
+        span {
+          color: $red;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: $white;
+        line-height: 30px;
+        margin-top: 40px;
+      }
+    }
+
+    &__slider {
+      margin-top: 120px;
+
+      .card--product {
+        min-height: auto;
+      }
+    }
+  }
+}

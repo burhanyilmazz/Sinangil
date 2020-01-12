@@ -1,0 +1,64 @@
+.accordion {
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__card {
+    &--active {
+      .accordion-card {
+        &__header {
+          background-color: #f1fde0;
+          color: $red;
+          
+          span {
+            color: #0a2777;
+            @include transition(0.5s);
+          }
+
+          i {
+            color: #4b8d55;
+            transform:rotate(180deg);
+          }
+        }
+
+        &__body {
+          padding: 20px 30px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &-card {
+    &__header{
+      background-color: rgba($color: $white, $alpha: .25);
+      padding: 23px 20px;
+      position: relative;
+      color: $white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 1px solid #4a8c54;
+      @include transition(0.5s);
+
+      i {
+        position: absolute;
+        right: 20px;
+        top: 25px;
+        color: #f1fde0;
+        @include transition(0.5s);
+      }
+    }
+
+    &__body {
+      font-size: 14px;
+      color: #70797e;
+      font-weight: 500;      
+      background-color: $white;
+      text-align: center;
+      overflow: hidden;
+      height: 0;
+      width: 100%;
+      @include transition(0.5s);
+    }
+  }
+}

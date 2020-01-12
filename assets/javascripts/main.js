@@ -124,6 +124,11 @@ $(document).ready(function() {
           },
     })
 
+    new Swiper(".gluten-free-products__slider .swiper-container",{
+        slidesPerView: 5,
+        spaceBetween: 30,
+    })
+
     $(".select2").select2();
 
     $(".tabs__menu a").click(function(event) {
@@ -133,6 +138,20 @@ $(document).ready(function() {
         var tab = $(this).attr("href");
         $(".tabs__container > div").not(tab).css("display", "none");
         $(tab).fadeIn();
+    });
+
+    $(".tabs-left__menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("tabs-left__menu--active");
+        $(this).parent().siblings().removeClass("tabs-left__menu--active");
+        var tab = $(this).attr("href");
+        $(".tabs-left__container > div").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+
+    $(".accordion-card__header").click(function() {
+        $(this).parent().addClass("accordion__card--active");
+        $(this).parent().siblings().removeClass("accordion__card--active");
     });
 });
 
