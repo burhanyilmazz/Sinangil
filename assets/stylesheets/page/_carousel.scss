@@ -57,28 +57,6 @@
       margin-top: calc(25vh - 140px);
       right: 81px;
 
-      &:before{
-        display: block;
-        position: absolute;
-        content: '';
-        width: 2px;
-        height: calc(25vh - 130px);
-        top: -104px;
-        background: $white;
-        left: 8px;
-      }
-
-      &:after{
-        display: block;
-        position: absolute;
-        content: '';
-        width: 2px;
-        height: calc(25vh - 130px);
-        bottom: -104px;
-        background: $white;
-        left: 8px;
-      }
-
       &-bullet{
         width: 20px;
         height: 20px;
