@@ -420,6 +420,66 @@
       }
     }
   }
+
+  &--secret {
+    background: $white;
+    border-radius: 20px;
+    min-height: 450px;
+    margin-bottom: 60px;
+    box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
+
+    figure {
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      margin-bottom: 10px;
+
+      img {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+
+    h2 {
+      color: $darkblue;
+      font-size: 26px;
+      font-weight: 600;
+      padding: 0 40px;
+      margin: 0;
+    }
+
+    h3 {
+      color: $red;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 0 40px;
+      margin: 0;
+    }
+
+    p {
+      color: $osloGrey;
+      font-size: 14px;
+      margin-top: 10px;
+      padding: 0 40px;
+    }
+
+    .card__social-button{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      position: absolute;
+      bottom: 27px;
+      color: #818d92;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 0 40px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+  }
 }
 
 @media screen and (max-width: 640px) {

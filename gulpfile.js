@@ -24,7 +24,7 @@ gulp.task("scripts", function() {
     ])
     .pipe(concat("master.js"))
     .pipe(rename("master.min.js"))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest("./assets/js"));
 
   /* Contact */
