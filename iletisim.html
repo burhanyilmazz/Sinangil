@@ -234,7 +234,7 @@
           </div>
         </div>
 
-        <div class="hr-head__line"></div>
+        <div class="contact-head__line"></div>
       </div>
     </section>
 
@@ -248,7 +248,13 @@
       </div>
 
       <div class="contact-maps__direction">
-        <a href="#"><img src="assets/images/contact/direction.png" alt=""></a>
+        <a href="#">
+          <picture>
+            <source media="(max-width: 1024px)" srcset="assets/images/contact/direction-mobile.png">
+            <source media="(min-width: 1025px)" srcset="assets/images/contact/direction.png">
+            <img loading="lazy" src="assets/images/contact/direction.png" alt="">
+          </picture>
+        </a>
       </div>
       
     </section>
@@ -340,7 +346,7 @@
             </div>
             <div class="col-md-12">
               <div class="form-group">
-                <textarea type="text" rows="4"  id="address" name="address" class="form-control" placeholder="MESAJ"> </textarea>
+                <textarea type="text" rows="4"  id="address" name="address" class="form-control" placeholder="MESAJ"></textarea>
               </div>
             </div>
             
@@ -381,14 +387,26 @@
               <div class="card card--small">
                 <h4>Sinangil</h4>
                 <h2>Kek Tarifleri</h2>
-                <p>
-                  Sinan Usta’dan lezzetli mi lezzetli kek tarifleri. Yapması
-                  kolay lezzeti olay!
-                </p>
+                <p>Sinan Usta’dan lezzetli mi lezzetli kek tarifleri. Yapması kolay lezzeti olay!</p>
                 <a href="tarifler.html" class="card__more">Tariflere Git</a>
-                <figure>
-                  <img src="assets/images/cards/recipe/1.png" alt="" />
-                </figure>
+                <figure><img src="assets/images/cards/recipe/1.png" alt=""></figure>
+              </div>
+
+              <div class="card card--recipe">
+                <a href="tarif.html">
+                  <figure>
+                    <img src="assets/images/recipe/thumb.png" alt="" />
+                  </figure>
+                  <h3>Sinangil</h3>
+                  <h2>Kek Tarifi</h2>
+                  <p>
+                    Sinangil 1963’ten bugüne çok amaçlı unları, geleneksel
+                    ürünleri, hazır ekmek karısımları ve sosyal...
+                  </p>
+                  <div class="card__more-button">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -396,14 +414,26 @@
               <div class="card card--small">
                 <h4>Sinangil</h4>
                 <h2>Kek Tarifleri</h2>
-                <p>
-                  Sinan Usta’dan lezzetli mi lezzetli kek tarifleri. Yapması
-                  kolay lezzeti olay!
-                </p>
+                <p>Sinan Usta’dan lezzetli mi lezzetli kek tarifleri. Yapması kolay lezzeti olay!</p>
                 <a href="tarifler.html" class="card__more">Tariflere Git</a>
-                <figure>
-                  <img src="assets/images/cards/recipe/2.png" alt="" />
-                </figure>
+                <figure><img src="assets/images/cards/recipe/2.png" alt=""></figure>
+              </div>
+
+              <div class="card card--recipe">
+                <a href="tarif.html">
+                  <figure>
+                    <img src="assets/images/recipe/thumb.png" alt="" />
+                  </figure>
+                  <h3>Sinangil</h3>
+                  <h2>Kek Tarifi</h2>
+                  <p>
+                    Sinangil 1963’ten bugüne çok amaçlı unları, geleneksel
+                    ürünleri, hazır ekmek karısımları ve sosyal...
+                  </p>
+                  <div class="card__more-button">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -411,14 +441,26 @@
               <div class="card card--small">
                 <h4>Sinangil</h4>
                 <h2>Kek Tarifleri</h2>
-                <p>
-                  Sinan Usta’dan lezzetli mi lezzetli kek tarifleri. Yapması
-                  kolay lezzeti olay!
-                </p>
+                <p>Sinan Usta’dan lezzetli mi lezzetli kek tarifleri. Yapması kolay lezzeti olay!</p>
                 <a href="tarifler.html" class="card__more">Tariflere Git</a>
-                <figure>
-                  <img src="assets/images/cards/recipe/1.png" alt="" />
-                </figure>
+                <figure><img src="assets/images/cards/recipe/1.png" alt=""></figure>
+              </div>
+
+              <div class="card card--recipe">
+                <a href="tarif.html">
+                  <figure>
+                    <img src="assets/images/recipe/thumb.png" alt="" />
+                  </figure>
+                  <h3>Sinangil</h3>
+                  <h2>Kek Tarifi</h2>
+                  <p>
+                    Sinangil 1963’ten bugüne çok amaçlı unları, geleneksel
+                    ürünleri, hazır ekmek karısımları ve sosyal...
+                  </p>
+                  <div class="card__more-button">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -427,18 +469,10 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-      <div class="recipe-slider__img recipe-slider__img--1">
-        <img src="assets/images/recipe/1.png" alt="" />
-      </div>
-      <div class="recipe-slider__img recipe-slider__img--2">
-        <img src="assets/images/recipe/2.png" alt="" />
-      </div>
-      <div class="recipe-slider__img recipe-slider__img--3">
-        <img src="assets/images/recipe/3.png" alt="" />
-      </div>
-      <div class="recipe-slider__img recipe-slider__img--4">
-        <img src="assets/images/recipe/4.png" alt="" />
-      </div>
+      <div class="recipe-slider__img recipe-slider__img--1"><img src="assets/images/recipe/1.png" alt=""></div>
+      <div class="recipe-slider__img recipe-slider__img--2"><img src="assets/images/recipe/2.png" alt=""></div>
+      <div class="recipe-slider__img recipe-slider__img--3"><img src="assets/images/recipe/3.png" alt=""></div>
+      <div class="recipe-slider__img recipe-slider__img--4"><img src="assets/images/recipe/4.png" alt=""></div>
     </section>
 
     <section class="extra">
@@ -466,14 +500,14 @@
         </div>
         <div class="extra__box">
           <a href="#">
-            <figure><img src="assets/images/extra/child.png" alt="" /></figure>
-            <h6>Çocuk Mutfağı</h6>
+            <figure><img src="assets/images/extra/gluten-free.png" alt="" /></figure>
+            <h6>Glutensiz Yaşam</h6>
           </a>
         </div>
         <div class="extra__box">
           <a href="#">
             <figure><img src="assets/images/extra/tv.png" alt="" /></figure>
-            <h6>Sinangil TV</h6>
+            <h6>Reklam Filmleri</h6>
           </a>
         </div>
       </div>
@@ -578,13 +612,13 @@
           </div>
           <div class="col-lg-6">
             <div class="gercek-dusler">
-              <figure>
-                <a href="http://www.gercekdusler.com.tr/" target="_blank"
-                  ><img
-                    src="assets/images/gercek-dusler.png"
-                    alt="Gerçek Düşler"
-                /></a>
-              </figure>
+              <a href="http://www.gercekdusler.com.tr/" target="_blank">
+                <picture>
+                  <source media="(max-width: 799px)" srcset="assets/images/gercek-dusler-mobile.png">
+                  <source media="(min-width: 800px)" srcset="assets/images/gercek-dusler.png">
+                  <img loading="lazy" src="assets/images/gercek-dusler.png" alt="Gerçek Düşler">
+                </picture>
+              </a>
             </div>
           </div>
         </div>

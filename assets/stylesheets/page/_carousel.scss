@@ -30,6 +30,10 @@
       height: 40px;
       border: 2px solid $white;
       border-radius: 20px;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
 
     &-button-prev {
@@ -50,33 +54,53 @@
       height: 40px;
       border: 2px solid $white;
       border-radius: 20px;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
 
-    &-pagination{
+    &-pagination {
       transform: initial;
       margin-top: calc(25vh - 140px);
       right: 81px;
 
-      &-bullet{
+      @media screen and (max-width: 1024px) {
+        right: auto;
+        margin: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-bullet {
         width: 20px;
         height: 20px;
         background: $white;
         z-index: 2;
         margin: 24px 0 !important;
         opacity: 1;
+        cursor: pointer;
 
-        &-active{
+        @media screen and (max-width: 1024px) {
+          margin: 24px !important;
+        }
+
+        &-active {
           background: $red;
           position: relative;
 
-          &:before{
+          &:before {
             position: absolute;
             z-index: 1;
             width: 36px;
             height: 36px;
             background: $red;
-            content: '';
-            opacity: .1;
+            content: "";
+            opacity: 0.1;
             border-radius: 100%;
             left: -8px;
             top: -8px;
@@ -86,16 +110,10 @@
     }
   }
 
-  img{
+  img {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     display: inline-block;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .carousel {
-   
   }
 }

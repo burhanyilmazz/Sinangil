@@ -5,6 +5,12 @@
     background-image: none !important;
     padding-bottom: 950px;
 
+    @media screen and (max-width: 1024px) {
+      overflow: hidden;
+      padding-top: 130px !important;
+      padding-bottom: 0;
+    }
+
     .row {
       height: auto !important;
     }
@@ -12,47 +18,164 @@
     h3 {
       margin-top: 25px !important;
     }
+    p {
+      @media screen and (max-width: 1440px) {
+        width: 80%;
+      }
 
-    .gluten-free{
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    .gluten-free {
       &__img {
+        &--1 {
+          left: 40%;
+          top: 50px;
+          bottom: auto;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        &--2 {
+          left: 50px;
+          top: 25%;
+          bottom: auto;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        &--3 {
+          left: 5%;
+          top: 90vh;
+          bottom: auto;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        &--4 {
+          left: 45%;
+          top: 90vh;
+          bottom: auto;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        &--5 {
+          right: 150px;
+          top: 200px;
+          bottom: auto;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        &--6 {
+          right: 50px;
+          top: 40%;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        &--7 {
+          right: 35%;
+          bottom: 100px;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
         &--human {
           top: 170px !important;
-    
+
+          @media screen and (max-width: 1024px) {
+            top: 20px !important;
+            right: auto;
+            left: 50%;
+            margin-left: -150px;
+            position: relative;
+            margin-bottom: 100px;
+            img {
+              width: 300px;
+            }
+          }
+
           &-bg {
             background: #d0e7c4;
             width: 122px;
             border-radius: 61px;
             z-index: 7 !important;
-    
+
+            @media screen and (max-width: 1024px) {
+              width: 80px;
+            }
+
             &-1 {
               height: 600px;
               top: 330px;
               right: 700px;
+
+              @media screen and (max-width: 1024px) {
+                height: 240px;
+                top: 490px;
+                right: auto;
+                left: 50%;
+                margin-left: -210px;
+              }
             }
-    
+
             &-2 {
               height: 290px;
               top: 0px;
               right: 550px;
+
+              @media screen and (max-width: 1024px) {
+                height: 114px;
+                top: 410px;
+                right: auto;
+                left: 50%;
+                margin-left: -120px;
+              }
             }
-    
+
             &-3 {
               height: 780px;
               top: 450px;
               right: 550px;
+
+              @media screen and (max-width: 1024px) {
+                height: 305px;
+                top: 540px;
+                right: auto;
+                left: 50%;
+                margin-left: -120px;
+              }
             }
-    
+
             &-4 {
               height: 600px;
               top: 160px;
               right: 390px;
+
+              @media screen and (max-width: 1024px) {
+                height: 234px;
+                top: 480px;
+                right: auto;
+                left: 50%;
+                margin-left: -20px;
+              }
             }
           }
         }
-      } 
+      }
     }
   }
-  
 
   &__more-button {
     padding: 10px 30px 10px 20px;
@@ -89,6 +212,14 @@
     margin-top: 120px;
     padding: 100px 0;
 
+    @media screen and (max-width: 1024px) {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+      padding: 30px 0;
+    }
+
     .content {
       margin-left: 30px;
       width: 60%;
@@ -117,14 +248,27 @@
         margin-left: calc(180px + ((100vw - 1630px) / 2));
       }
 
+      @media screen and (max-width: 1024px) {
+        margin: 0 !important;
+        width: 100%;
+        padding: 0 50px;
+      }
+
       blockquote {
         margin: 85px 0;
+        @media screen and (max-width: 1024px) {
+          margin: 30px 0;
+        }
 
         h2 {
           margin: 0;
           font-weight: 600;
           color: $red;
           font-size: 36px;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 24px;
+          }
 
           span {
             color: #0a2777;
@@ -136,6 +280,9 @@
           font-size: 16px;
           margin: 0;
           margin-top: 30px;
+          @media screen and (max-width: 1024px) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -148,12 +295,22 @@
       #4b8d55;
     padding-top: 820px;
     padding-bottom: 200px;
+    overflow: hidden;
+
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 130px;
+    }
 
     .card--recipe {
       width: 300px;
       position: absolute;
       top: 130px;
       right: 150px;
+
+      @media screen and (max-width: 1024px) {
+        right: 50%;
+        margin-right: -150px;
+      }
     }
 
     &__img {
@@ -163,11 +320,19 @@
       &--1 {
         right: 480px;
         top: 480px;
+        @media screen and (max-width: 1024px) {
+          right: auto;
+          left: -150px;
+        }
       }
 
       &--2 {
         right: 0px;
         top: 510px;
+
+        @media screen and (max-width: 1024px) {
+          right: -100px;
+        }
       }
     }
 
@@ -180,6 +345,10 @@
         font-weight: 600;
         margin: 0;
 
+        @media screen and (max-width: 1024px) {
+          font-size: 24px;
+        }
+
         span {
           color: $red;
         }
@@ -190,14 +359,62 @@
         color: $white;
         line-height: 30px;
         margin-top: 40px;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 14px;
+          line-height: 16px;
+          margin-top: 20px;
+        }
       }
     }
 
     &__slider {
       margin-top: 120px;
+      position: relative;
+
+      .swiper {
+        &-slide{
+          @media screen and (max-width: 1024px) {
+            width: 300px !important;
+          }
+        }
+
+        &-button {
+          &-next{
+            display: none;
+
+            @media screen and (max-width: 1024px) {
+              display: flex;
+              background: url(../images/gluten-free/right.png) no-repeat;
+              width: 79px;
+              height: 40px;
+              top: auto;
+              bottom: -60px;              
+              right: 50%;
+              margin-right: -78px;
+              outline: 0;
+            }
+          }
+
+          &-prev {
+            display: none;
+            @media screen and (max-width: 1024px) {
+              display: flex;
+              background: url(../images/gluten-free/left.png) no-repeat;
+              width: 79px;
+              height: 40px;
+              top: auto;
+              bottom: -60px;
+              left: 50%;
+              margin-left: -80px;
+              outline: 0;
+            }
+          }
+        }
+      }
 
       .card--product {
-        min-height: auto;
+        min-height: auto;        
       }
     }
   }

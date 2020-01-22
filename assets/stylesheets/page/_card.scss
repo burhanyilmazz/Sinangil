@@ -158,6 +158,15 @@
     text-align: center;
     padding-bottom: 40px;
 
+    @media screen and (max-width: 1024px) {
+      margin-left: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-left: 10px;
+      width: calc(50% - 10px);
+    }
+
     figure {
       display: flex;
       border: 1px solid $blackSqueeze;
@@ -427,6 +436,10 @@
     min-height: 450px;
     margin-bottom: 60px;
     box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
+    @media screen and (max-width: 640px) {
+      min-height: auto;
+      padding-bottom: 10px;
+     }
 
     figure {
       border-radius: 20px;
@@ -473,6 +486,13 @@
       font-size: 15px;
       font-weight: 500;
       padding: 0 40px;
+
+      @media screen and (max-width: 640px) {
+        position: relative;
+        bottom: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+       }
 
       img {
         margin-right: 10px;

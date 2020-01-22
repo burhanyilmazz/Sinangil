@@ -5,6 +5,9 @@
   &__title {
     position: absolute;
     top: 110px;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
     h3 {
       color: $white;
       margin: 0;
@@ -28,6 +31,15 @@
       top: -10px;
       line-height: 100px;
       font-weight: 600;
+    }
+  }
+
+  .accordion {
+    display: none;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 1024px) {
+      display: block;
     }
   }
 }

@@ -24,3 +24,11 @@
     );
   }
 }
+
+.parsley-errors-list{
+  padding: 0 0 0 20px;
+  list-style: none;
+  color: $red;
+  font-weight: 600;
+  font-size: 12px;
+}

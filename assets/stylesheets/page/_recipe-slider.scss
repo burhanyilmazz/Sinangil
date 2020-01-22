@@ -7,6 +7,11 @@
   justify-content: space-between;
   padding: 170px 0;
 
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+
   &__img {
     position: absolute;
     z-index: 1;
@@ -14,22 +19,37 @@
     &--1 {
       left: 0;
       top: -70px;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
 
     &--2 {
       left: 0;
       top: 50%;
       margin-top: -50px;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
 
     &--3 {
       left: 0;
       bottom: -220px;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
 
     &--4 {
       left: 400px;
       bottom: -150px;
+      @media screen and (max-width: 1024px) {
+        bottom: auto;
+        top: 0;
+        right: 0;
+        left: auto;
+      }
     }
   }
 
@@ -38,6 +58,12 @@
     left: calc((100vw - 1290px) / 2);
     position: relative;
     z-index: 2;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      left: 0;
+      padding: 0 50px;
+    }
 
     h5 {
       color: $darkblue;
@@ -57,6 +83,10 @@
       position: absolute;
       left: 140px;
       top: -70px;
+
+      @media screen and (max-width: 1024px) {
+        left: 180px;
+      }
     }
 
     p {
@@ -101,6 +131,15 @@
     position: relative;
     margin-top: -50px;
 
+    @media screen and (max-width: 1366px) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      margin-top: 0px;
+    }
+
     .swiper {
       &-wrapper {
         padding: 50px 0 50px 50px;
@@ -109,6 +148,10 @@
       &-slide {
         width: 640px;
         opacity: 0.5;
+
+        @media screen and (max-width: 1024px) {
+          width: 300px;
+        }
 
         &-active {
           opacity: 1;
@@ -131,6 +174,10 @@
           top: auto;
           bottom: 0;
           left: 50px;
+
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
 
           &:focus{
 						outline: 0;
@@ -168,6 +215,9 @@
           right: auto;
           bottom: 0;
           left: 530px;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
 
           &:focus{
 						outline: 0;
@@ -196,6 +246,9 @@
         margin-bottom: 5px;
         background: transparent;
         position: relative;
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
         
         &:before{
           width: 100%;
@@ -218,12 +271,19 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 1366px) {
-  .recipe-slider {
-   &__slider{
-     width: 70%;
-   }
+  .card--small {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .card--recipe {
+    display: none;
+    min-height: auto;
+    @media screen and (max-width: 1024px) {
+      display: block;
+      padding-bottom: 60px;
+    }
   }
 }

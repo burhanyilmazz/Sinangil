@@ -5,9 +5,18 @@
   z-index: 3;
   height: 970px;
 
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 30px 0;
+  }
+
   .row {
     height: 970px;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+    }
   }
 
   h3 {
@@ -54,35 +63,99 @@
       background: url(../images/gluten-free/more.png) no-repeat;
       margin-bottom: 35px;
     }
+    @media screen and (max-width: 768px) {
+      padding: 10px 30px 10px 20px;
+      border-radius: 20px;
+      border-top-left-radius: 5px;
+      background: $linkWater;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      color: $darkblue;
+      margin-top: 30px;
+
+      &:after {
+        font-family: "sinangil" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\62";
+        margin-top: 8px;
+        margin-left: 20px;
+      }
+      &:before {
+        display: none;
+      }
+    }
   }
 
   &__img {
     position: absolute;
     z-index: 8;
 
+    @media screen and (max-width: 768px) {
+      img {
+        width: 50%;
+      }
+    }
+
     &--1 {
       left: 150px;
       top: -100px;
+
+      @media screen and (max-width: 768px) {
+        left: auto;
+        top: -40px;
+        right: 50px;
+      }
     }
 
     &--2 {
       left: 50px;
       bottom: 25%;
+      @media screen and (max-width: 1024px) {
+        bottom: 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        bottom: auto;
+        top: 400px;
+      }
     }
 
     &--3 {
       left: 25%;
       bottom: 50px;
+
+      @media screen and (max-width: 768px) {
+        bottom: auto;
+        top: 900px;
+      }
     }
 
     &--4 {
       left: 45%;
       bottom: 150px;
+
+      @media screen and (max-width: 768px) {
+        bottom: auto;
+        top: 700px;
+        left: auto;
+        right: 20%;
+      }
     }
 
     &--5 {
       right: 150px;
       bottom: -20px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
 
     &--6 {
@@ -93,6 +166,20 @@
     &--human {
       top: -100px;
       right: 20px;
+
+      @media screen and (max-width: 1024px) {
+        right: -270px;
+      }
+
+      @media screen and (max-width: 768px) {
+        position: relative;
+        right: 0;
+        top: -60px;
+
+        img {
+          width: 90%;
+        }
+      }
     }
   }
 }

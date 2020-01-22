@@ -120,13 +120,19 @@ $(window).scroll(function() {
 
     new Swiper(".carousel .swiper-container", {
       pagination: {
-        el: ".carousel .swiper-pagination"
+        el: ".carousel .swiper-pagination",
+        clickable: true
       },
       navigation: {
         nextEl: ".carousel .swiper-button-next",
         prevEl: ".carousel .swiper-button-prev"
       },
-      direction: "vertical"
+      direction: "vertical",
+      breakpoints: {
+        1024: {
+          direction: "horizontal",
+        }
+      }
     }),
       new Swiper(".recipe-slider__slider .swiper-container", {
         slidesPerView: "auto",
@@ -140,6 +146,13 @@ $(window).scroll(function() {
           el: ".recipe-slider__slider .swiper-scrollbar",
           hide: false,
           draggable: true
+        },
+        breakpoints: {
+          1024: {
+            scrollbar: false,
+            centeredSlides: true,
+            loop: false
+          }
         }
       });
 
@@ -185,8 +198,18 @@ $(window).scroll(function() {
 
     new Swiper(".gluten-free-products__slider .swiper-container", {
       slidesPerView: 5,
-      spaceBetween: 30
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".gluten-free-products__slider .swiper-button-next",
+        prevEl: ".gluten-free-products__slider .swiper-button-prev"
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: "auto",          
+        }
+      }
     });
+
 
     $(".select2").select2();
 
@@ -231,10 +254,53 @@ $(window).scroll(function() {
         .siblings()
         .removeClass("accordion__card--active");
     });
+
+    $(".about-timeline__timeline li").click(function() {
+      var $this = $(this);
+      var index = $(this).index();
+      $this.addClass("active").siblings().removeClass("active");
+
+      $(".about-timeline__content li").eq(index).addClass("active").siblings().removeClass("active");
+    })
+
+    $(".about-timeline-timeline__arrow").click(function() {
+      var $this = $(this);
+      var $timeline = $(".about-timeline__timeline li");
+      var $timelineActive = $(".about-timeline__timeline li.active").index()
+      var $content = $(".about-timeline__content li");
+
+      if($this.hasClass("about-timeline-timeline__arrow--right")) {
+        if($timelineActive < $timeline.length-1) {
+          $timeline.removeClass("active").eq($timelineActive + 1).addClass("active");
+          $content.removeClass("active").eq($timelineActive + 1).addClass("active");
+        }
+      } else {
+        if($timelineActive > 0) {
+          $timeline.removeClass("active").eq($timelineActive - 1).addClass("active");
+          $content.removeClass("active").eq($timelineActive - 1).addClass("active");
+        }
+      }     
+    })
+
+    $(".nav-left > li").click(function(event) {
+      var $this = $(this);
+      if($this.find("ul").length) {
+        event.preventDefault()
+        $this.addClass("nav-left--open").siblings().removeClass("nav-left--open")
+      }
+    })
+
+    $(".product-image__list > li").click(function(event) {
+      event.preventDefault();
+      var $this = $(this);
+      
+      $(".product-image__img figure").eq($this.index()).addClass("product-image__img--active").siblings().removeClass("product-image__img--active")
+      $this.addClass("product-image__list--active").siblings().removeClass("product-image__list--active")
+    })
   });
 
 window.onload = function() {
-  lax.setup(); // init
+  lax.setup()
 
   var updateLax = function() {
     lax.update(window.scrollY);

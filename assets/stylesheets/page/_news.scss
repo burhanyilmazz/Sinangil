@@ -3,6 +3,14 @@
     background: $serenade;
     margin-top: 110px;
 
+    @media screen and (max-width: 1024px) {
+      margin-top: 70px;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-top: 80px;
+    }
+
     h4 {
       color: $red;
       font-size: 20px;
@@ -28,7 +36,8 @@
       padding: 0;
       list-style: none;
       display: flex;
-
+      position: relative;
+      
       li {
         width: 33%;
         display: flex;
@@ -38,6 +47,11 @@
         background: #ffd2dd;
         margin-bottom: 52px;
         position: relative;
+        z-index: 2;
+
+        @media screen and (max-width: 992px) {
+          margin-bottom: 0px;
+        }
 
         &:after {
           position: absolute;
@@ -49,11 +63,15 @@
           left: 0;
 					display: block;
 					cursor: pointer;
-					@include transition(0.5s);
+          @include transition(0.5s);
+
+          @media screen and (max-width: 992px) {
+            display: none;
+          }
         }
 
         &:nth-child(2) {
-					background: #ffeebe;
+          background: #ffeebe;
 					
 					&:after{
 						background: #ffeebe;
@@ -61,7 +79,7 @@
         }
 
         &:nth-child(3) {
-					background: #d8efff;
+          background: #d8efff;
 					&:after{
 						background: #d8efff;
 					}
@@ -80,6 +98,10 @@
 					height: 52px !important;
 					bottom: -52px !important;
         }
+
+        @media screen and (max-width: 992px) {
+          background: #eef3f9 !important;
+        }
       }
 
       a {
@@ -89,6 +111,10 @@
 				flex-direction: column;
 				width: 100%;
         height: 215px;
+
+        @media screen and (max-width: 992px) {
+          height: 120px;
+        }
       }
 
       figure {
@@ -96,6 +122,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        img {
+          @media screen and (max-width: 992px) {
+            width: 70%;
+          }
+        }
       }
 
       span {

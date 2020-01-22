@@ -115,13 +115,12 @@
 
       figure {
         display: none;
+        &.product-image__img--active {
+          display: inline-block;
+        }
 
         img {
           max-width: 100%;
-        }
-
-        &:first-child {
-          display: inline-block;
         }
       }
     }

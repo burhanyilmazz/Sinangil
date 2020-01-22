@@ -36,6 +36,10 @@ a {
     left: 43px;
     animation: mainArrowAnim 2s infinite;
   }
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 @keyframes mainArrowAnim {
