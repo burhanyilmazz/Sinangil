@@ -3,6 +3,7 @@
     background: $blackSqueeze;
     padding-top: 240px;
     position: relative;
+    overflow: hidden;
 
     @media screen and (max-width: 1024px) {
       padding-top: 140px;

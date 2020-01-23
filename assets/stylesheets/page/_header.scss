@@ -17,6 +17,7 @@ $headerHeight: 110px;
     img {
       max-width: 100%;
       display: inline-block;
+      border-left: 1px solid rgba($color: #818d92, $alpha: 0.5);
     }
   }
 
@@ -104,6 +105,10 @@ $headerHeight: 110px;
           position: absolute;
           margin-left: -63px;
           margin-top: -2px;
+
+          @media screen and (max-width: 1366px) {
+            margin-left: -56px;
+          }
         }
         &:after {
           display: inline-flex !important;
@@ -115,6 +120,9 @@ $headerHeight: 110px;
           margin-left: -68px;
           margin-top: 5px;
           @include transition(0.5s);
+          @media screen and (max-width: 1366px) {
+            margin-left: -61px;
+          }
         }
       }
 
@@ -303,6 +311,11 @@ $headerHeight: 110px;
     border-bottom: 1px solid $white;
 
     .header {
+      &__logo{
+        img {
+          border-left: 1px solid transparent;
+        }
+      }
       &__nav {
         &:after {
           background: rgba(255, 255, 255, 0.3);
@@ -339,7 +352,13 @@ $headerHeight: 110px;
     }
 
     &.header--shrink {
+      border-bottom: 1px solid rgba($color: #818d92, $alpha: 0.5);
       .header {
+        &__logo {
+          img {
+            border-left: 1px solid rgba($color: #818d92, $alpha: 0.5);
+          }
+        }
         &__nav {
           &:after {
             background: $osloGrey;
@@ -411,6 +430,9 @@ $headerHeight: 110px;
   }
 
   &-product {
+    &__buttons {
+      display: none;
+    }
     &__parent {
       padding: 35px 0;
       width: 294px;
@@ -432,7 +454,7 @@ $headerHeight: 110px;
         a {
           color: #2b4ca6;
           width: 276px;
-          height: 60px;
+          height: 53px;
           position: relative;
           padding-left: 50px;
           display: flex;
@@ -472,7 +494,7 @@ $headerHeight: 110px;
     }
 
     &__child {
-      background: $white;
+      background: #f9faff;
       padding: 50px 20px 50px 40px;
       width: 330px;
       position: relative;
@@ -530,13 +552,13 @@ $headerHeight: 110px;
   &__shadow {
     position: fixed;
     background: rgba($color: #212044, $alpha: 0.5);
-    top: 0;
+    top: 110px;
     left: 0;
     z-index: -101;
     width: 100%;
     overflow: hidden;
     opacity: 0;
-    height: 100%;
+    height: calc(100% - 110px);
     visibility: hidden;
     @include transition(0.4s);
     &--active {
@@ -552,10 +574,9 @@ $headerHeight: 110px;
     &__nav {
       li {
         a {
-          padding: 0 6px;
+          padding: 0 16px;
         }
       }
-
       &--dropdown {
         > a {
           width: 120px;
@@ -567,6 +588,13 @@ $headerHeight: 110px;
 
 @media screen and (max-width: 1280px) {
   .header {
+    &__nav {
+      li {
+        a {
+          padding: 0 5px;
+        }
+      }
+    }
   }
 }
 
@@ -605,19 +633,21 @@ $headerHeight: 110px;
       justify-content: center;
       align-items: center;
       position: absolute;
-      right: 0;
+      right: -15px;
       top: 0;
       z-index: 999;
 
       span {
         display: block;
         position: absolute;
-        height: 2px;
+        height: 3px;
         width: 25px;
         background: $white;
         opacity: 1;
         transform: rotate(0deg);
         transition: 0.25s ease-in-out;
+        border-radius: 2px;
+        overflow: hidden;
 
         &:nth-child(1) {
           margin-top: -9px;
@@ -625,11 +655,11 @@ $headerHeight: 110px;
 
         &:nth-child(2),
         &:nth-child(3) {
-          margin-top: 9px;
+          margin-top: 5px;
         }
 
         &:nth-child(3) {
-          margin-top: 9px;
+          margin-top: 5px;
         }
       }
 
@@ -651,6 +681,10 @@ $headerHeight: 110px;
           }
         }
       }
+    }
+
+    &__nav {
+      width: 100%;
     }
 
     nav {
@@ -685,7 +719,7 @@ $headerHeight: 110px;
         .header {
           &__nav {
             flex-direction: column;
-            width: 100%;
+            
             margin-top: 100px;
 
             a {

@@ -175,6 +175,13 @@ $(window).scroll(function() {
       navigation: {
         nextEl: ".quality-slider__slider .swiper-button-next",
         prevEl: ".quality-slider__slider .swiper-button-prev"
+      },
+      breakpoints: {
+        640: {
+          loop: false,
+          centeredSlides: true,
+          spaceBetween: 20,
+        }
       }
     });
 

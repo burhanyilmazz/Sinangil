@@ -52,6 +52,10 @@
     .container {
       position: relative;
       height: calc(100vh - 110px);
+
+      @media screen and (max-width: 768px) {
+        height: calc(100vh - 300px);
+      }
     }
 
     .breadcrumb {
@@ -66,6 +70,10 @@
 
       img {
         max-width: 100%;
+
+        @media screen and (max-width: 768px) {
+          max-width: 70%;
+        }
       }
     }
 
@@ -79,7 +87,7 @@
       }
 
       @media screen and (max-width: 768px) {
-        bottom: 40px;
+        bottom: 60px;
       }
     }
 
@@ -100,6 +108,7 @@
       #d9e7f1;
     background-size: cover;
     padding: 120px 0;
+    overflow: hidden;
 
     @media screen and (max-width: 768px) {
       padding: 30px 0 120px;

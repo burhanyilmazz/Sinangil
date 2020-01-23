@@ -24,7 +24,7 @@ gulp.task("scripts", function() {
     ])
     .pipe(concat("master.js"))
     .pipe(rename("master.min.js"))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest("./assets/js"));
 
   /* Contact */
@@ -42,13 +42,13 @@ gulp.task("scripts", function() {
 gulp.task("sass", function() {
   gulp
     .src(["./assets/stylesheets/main.scss"])
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(sassGlob())
-    .pipe(sass.sync({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(sass.sync({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(autoprefixer("last 15 version"))
     .pipe(concat("style.css"))
     .pipe(rename("style.min.css"))
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest("./assets/css"));
 });
 

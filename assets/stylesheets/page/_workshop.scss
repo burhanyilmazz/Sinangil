@@ -3,11 +3,16 @@
   z-index: 1;
   min-height: 100vh;
   background: url(../images/workshop/bg.png) right bottom no-repeat $blackSqueeze;
-  background-size: contain;
+  background-size: 1380px;
   padding-top: 210px;
+  padding-bottom: 100px;
 
-  @media screen and (max-width: 768px) {
-    padding-top: 80px;
+  @media screen and (max-width: 1366px) {
+    background-size: 950px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 70px;
   }
 
   &__content {

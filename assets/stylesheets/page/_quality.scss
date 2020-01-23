@@ -106,6 +106,10 @@
         @media screen and (max-width: 1024px) {
           padding-top: 0;
         }
+
+        @media screen and (max-width: 768px) {
+          margin-left: 0px;
+        }
       }
       &-slide {
         width: 230px;
@@ -130,6 +134,10 @@
 
           @media screen and (max-width: 1024px) {
             bottom: 30px;
+          }
+
+          @media screen and (max-width: 768px) {
+            left: calc(50% - 80px)
           }
 
           &:focus {
@@ -170,6 +178,10 @@
           left: calc(17% + 168px);
           @media screen and (max-width: 1024px) {
             bottom: 30px;
+          }
+
+          @media screen and (max-width: 768px) {
+            left: calc(50% - 2px)
           }
 
           &:focus {
