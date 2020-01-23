@@ -204,8 +204,13 @@
     background: $white;
     border-radius: 20px;
     min-height: 450px;
+    padding-bottom: 60px;
     margin-bottom: 60px;
     box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
+
+    @media screen and (max-width: 768px) {
+      min-height: auto;
+    }
 
     figure {
       border-radius: 20px;
@@ -396,12 +401,20 @@
     background: $white;
     height: 392px;
 
+    @media screen and (max-width: 768px) {
+      height: auto;
+    }
+
     h5{
       margin: 0;
       font-size: 20px;
       font-weight: 600;
       color: #e40134;
       line-height: 1;
+
+      @media screen and (max-width: 768px) {
+        font-size: 16px
+      }
     }
 
     h2 {
@@ -410,6 +423,10 @@
       font-weight: 600;
       color: #2b4ca6;
       line-height: 1;
+
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
     }
 
     table {
@@ -417,6 +434,10 @@
       color: #818d92;
       margin-top: 55px;
       font-size: 16px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
 
       th {
         text-align: left;

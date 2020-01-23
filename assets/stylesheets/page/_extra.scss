@@ -1,6 +1,7 @@
 .extra {
   background: $pink;
   padding: 25px 0;
+  overflow: hidden;
 
   .container {
     display: flex;
@@ -16,8 +17,8 @@
   &__box {
     position: relative;
     @media screen and (max-width: 1024px) {
-      min-width: 200px;
       border-left: 1px solid rgba($color: $vivid, $alpha: 0.1);
+      width: 50%;
 
       &:after {
         display: none !important;

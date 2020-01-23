@@ -22,6 +22,11 @@
       color: $darkblue;
       margin: 0;
       line-height: 56px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 36px;
+        line-height: 1;
+      }
     }
 
     p {
@@ -222,12 +227,20 @@
     background: #e5efee;
     padding: 90px 0;
 
+    @media screen and (max-width: 768px) {
+      padding: 40px 0;
+    }
+
     h2 {
       font-size: 36px;
       font-weight: 600;
       color: $red;
       text-align: center;
       margin: 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+      }
     }
 
     h4 {

@@ -2,6 +2,11 @@
   background: $blackSqueeze;
   margin-top: 110px;
   padding-top: 120px;
+  overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    margin-top: 70px;
+    padding-top: 70px;
+  }
 
   &-head {
     background: $blackSqueeze;
@@ -9,6 +14,10 @@
     padding: 140px 0 70px;
     position: relative;
     z-index: 2;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 10px;
+    }
 
     &__text {
       position: relative;
@@ -19,6 +28,10 @@
         font-family: "arista_pro_bold";
         margin: 0;
         color: $red;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 16px;
+        }
       }
 
       h2 {
@@ -26,6 +39,10 @@
         font-size: 50px;
         font-family: "arista_pro_bold";
         margin: 0;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 26px;
+        }
       }
 
       p {
@@ -35,6 +52,10 @@
 
         span {
           font-weight: 600;
+        }
+
+        @media screen and (max-width: 1024px) {
+          font-size: 14px;
         }
       }
     }
@@ -50,6 +71,11 @@
     font-size: 42px;
     font-weight: 600;
     margin: 0;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
   }
 
   &__detail {
@@ -59,12 +85,20 @@
     border-top-right-radius: 20px;
     box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
 
+    @media screen and (max-width: 991px) {
+      padding: 20px;
+    }
+
     h2 {
       color: $red;
       font-size: 30px;
       font-weight: 600;
       margin: 0;
       padding-left: 20px;
+
+      @media screen and (max-width: 991px) {
+        font-size: 18px;
+      }
     }
 
     h1 {
@@ -73,6 +107,10 @@
       font-weight: 600;
       margin: 0;
       padding-left: 20px;
+
+      @media screen and (max-width: 991px) {
+        font-size: 28px;
+      }
     }
 
     h3 {
@@ -82,6 +120,10 @@
       margin: 0;
       padding-left: 20px;
 
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+      }
+
       &:after {
         width: 200px;
         height: 1px;
@@ -89,6 +131,10 @@
         content: "";
         background: #e7e7e7;
         margin: 50px 0;
+
+        @media screen and (max-width: 991px) {
+          margin: 20px 0;
+        }
       }
     }
 
@@ -97,6 +143,10 @@
       color: $rollingStone;
       line-height: 24px;
       padding-left: 20px;
+
+      @media screen and (max-width: 991px) {
+        font-size: 14px;
+      }
     }
 
     .breadcrumb {
@@ -147,10 +197,21 @@
         cursor: pointer;
         border-right: 1px solid $white;
 
+        @media screen and (max-width: 640px) {
+          width: 60px;
+          height: 60px;
+          font-size: 22px;
+        }
+
         span {
           font-size: 14px;
           line-height: 18px;
           margin-top: 10px;
+
+          @media screen and (max-width: 640px) {
+            font-size: 12px;
+            margin-top: 7px;
+          }
         }
 
         &:hover {
@@ -181,6 +242,10 @@
     background: #deeafa;
     padding: 40px;
     margin-bottom: 700px;
+
+    @media screen and (max-width: 991px) {
+      margin: 0;
+    }
 
     h3 {
       color: $red;
@@ -231,6 +296,15 @@
     border-bottom-right-radius: 20px;
     box-shadow: 14px 14px 24px 0px rgba(0, 0, 0, 0.04);
 
+    @media screen and (max-width: 991px) {
+      position: relative;
+      width: 100%;
+      right: auto;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0 15px;
+    }
+
     table {
       width: 100%;
 
@@ -240,6 +314,10 @@
         font-size: 18px;
         font-weight: 600;
         padding: 0 5px;
+
+        @media screen and (max-width: 640px) {
+          font-size: 14px;
+        }
 
         &:first-child {
           text-align: left;
@@ -252,6 +330,10 @@
         text-align: right;
         padding: 12px 5px;
         font-weight: 500;
+        @media screen and (max-width: 640px) {
+          font-size: 14px;
+          padding: 5px
+        }
 
         &:first-child {
           text-align: left;
@@ -269,6 +351,12 @@
     width: 100%;
     bottom: 0;
 
+    @media screen and (max-width: 991px) {
+      position: relative;
+      padding: 40px 40px 60px;
+      min-height: auto;
+    }
+
     h2 {
       font-weight: 600;
       font-size: 44px;
@@ -278,9 +366,22 @@
       width: 330px;
       text-align: center;
 
+      @media screen and (max-width: 991px) {
+        width: 100%;
+        text-align: left;
+      }
+
+      @media screen and (max-width: 640px) {
+        font-size: 24px;
+      }
+
       span {
         font-size: 24px;
         color: $red;
+
+        @media screen and (max-width: 640px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -289,6 +390,10 @@
       display: inline-block;
       color: $red;
       margin-top: 40px;
+
+      @media screen and (max-width: 991px) {
+        margin-top: 10px;
+      }
 
       &:after {
         font-family: "sinangil" !important;
@@ -306,10 +411,20 @@
     }
   }
 
-  &-recipe__slider{
+  &-recipe__slider {
     .swiper {
       &-wrapper {
         padding: 50px 0;
+
+        @media screen and (max-width: 991px) {
+          padding: 20px 0;
+        }
+      }
+
+      &-slide {
+        @media screen and (max-width: 640px) {
+          width: 200px;
+        }
       }
 
       &-button {
@@ -329,9 +444,9 @@
           bottom: 64px;
           left: 50px;
 
-          &:focus{
-						outline: 0;
-					}
+          &:focus {
+            outline: 0;
+          }
 
           &:after {
             font-family: "sinangil" !important;
@@ -346,6 +461,10 @@
             content: "\62";
             margin-top: -8px;
             transform: rotate(180deg);
+          }
+
+          @media screen and (max-width: 640px) {
+            bottom: 30px;
           }
         }
 
@@ -366,9 +485,14 @@
           bottom: 64px;
           left: 530px;
 
-          &:focus{
-						outline: 0;
-					}
+          @media screen and (max-width: 640px) {
+            left: 128px;
+            bottom: 30px;
+          }
+
+          &:focus {
+            outline: 0;
+          }
 
           &:after {
             font-family: "sinangil" !important;
@@ -394,20 +518,24 @@
         background: transparent;
         position: absolute;
         bottom: 64px;
-        
-        &:before{
+        @media screen and (max-width: 640px) {
+          display: none;
+        }
+
+        &:before {
           width: 100%;
           height: 2px;
           background: $poloBlue;
           display: block;
           position: absolute;
-          content: '';
+          content: "";
           top: 50%;
           margin-top: -1px;
         }
 
-        &-drag{
-          background: url(../images/icons/drag.png) center center $poloBlue no-repeat;
+        &-drag {
+          background: url(../images/icons/drag.png) center center $poloBlue
+            no-repeat;
           padding: 0 10px;
           height: 30px;
           border-radius: 15px;
@@ -415,7 +543,6 @@
         }
       }
     }
-    
   }
 }
 

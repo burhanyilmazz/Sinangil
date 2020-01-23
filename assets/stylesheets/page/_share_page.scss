@@ -7,6 +7,14 @@
     position: relative;
     z-index: 2;
     width: 75%;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-top: 130px;
+    }
   }
 
   .breadcrumb {
@@ -17,6 +25,14 @@
     font-size: 72px;
     color: $darkblue;
     margin: 0;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 60px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
   }
 
   span {
@@ -27,6 +43,14 @@
     font-size: 16px;
     color: $osloGrey;
     margin-bottom: 100px;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   figure {
@@ -50,6 +74,9 @@
   &__img {
     position: absolute;
     z-index: 1;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
 
     &--2 {
       top: 0px;
@@ -91,6 +118,17 @@
     align-items: center;
     text-align: center;
     background: $blackSqueeze;
+
+    @media screen and (max-width: 1024px) {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      height: 70px;
+      flex-direction: row;
+      padding: 0 20px;
+      margin-bottom: 70px;
+    }
   }
 
   &-instagram {
@@ -99,12 +137,36 @@
       font-size: 24px;
       font-weight: 700;
       margin-top: 30px;
+
+      span {
+        @media screen and (max-width: 640px) {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        margin-top: 0px;
+      }
+
+      @media screen and (max-width: 640px) {
+        line-height: 1;
+        font-size: 18px;
+      }
     }
 
     &__icon {
       position: absolute;
       top: 130px;
       left: -20px;
+
+      @media screen and (max-width: 1024px) {
+        top: -30px;
+      left: 200px;
+      }
+
+      @media screen and (max-width: 640px) {
+        left: 100px;
+      }
     }
 
     &__text {
@@ -113,6 +175,14 @@
       font-size: 22px;
       transform: rotate(-90deg);
       margin-bottom: 160px;
+      @media screen and (max-width: 1024px) {
+        transform: rotate(0deg);
+        margin-bottom: 0px;
+      }
+
+      @media screen and (max-width: 640px) {
+       font-size: 14px;
+      }
     }
   }
 }

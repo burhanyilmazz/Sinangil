@@ -37,9 +37,7 @@ $(window).scroll(function() {
         .addClass("header-product__image--active");
     });
 
-    $('.header__shadow, .header__nav li:not(".header__nav--dropdown")').on(
-      "mouseenter",
-      function(event) {
+    $('.header__shadow, .header__nav li:not(".header__nav--dropdown")').on("mouseenter", function(event) {
         $(".header__shadow").removeClass("header__shadow--active");
         $(".header__nav--dropdown").removeClass("header__nav--hover");
         $(".header__product").removeClass("header__product--opened");
@@ -56,14 +54,25 @@ $(window).scroll(function() {
           .find("figure")
           .eq(parentActiveIndex)
           .addClass("header-product__image--active");
-      }
-    );
+    });
 
     $(".header__nav--dropdown").on("mouseenter", function(e) {
       var $this = $(this);
       $this.addClass("header__nav--hover");
       $(".header__product").addClass("header__product--opened");
       $(".header__shadow").addClass("header__shadow--active");
+    });
+
+    $(".header__mobile-nav").on("click", function(e) {
+      e.preventDefault(),
+        $(this).toggleClass("header__mobile-nav--open"),
+        $("nav").toggleClass("header__navigation--opened"),
+        $("header").toggleClass("header--open"),
+        $("html").toggleClass("disable-scroll");
+    });
+
+    $(".header__nav--dropdown").on("click", function(event) {
+      $(".header__product--opened").addClass("header__product--opened");
     });
 
     $(".card--product li").on("mouseenter", function(e) {
@@ -95,28 +104,7 @@ $(window).scroll(function() {
           .css({
             opacity: "0"
           });
-    });
-
-    $(".header__mobile-nav").on("click", function(e) {
-      e.preventDefault(),
-        $(this).toggleClass("header__mobile-nav--open"),
-        $("nav").toggleClass("header__navigation--opened"),
-        $("header").toggleClass("header--open"),
-        $("html").toggleClass("disable-scroll");
-    });
-
-    $(".header__nav--dropdown").on("click", function(e) {
-      e.preventDefault(),
-        $(this)
-          .find("ul")
-          .toggleClass("header-nav__dropdown--open");
-    });
-
-    $(".header__language select").on("change", function(e) {
-      e.preventDefault();
-      var t = $(this).val();
-      window.location.href = t;
-    });
+    });    
 
     new Swiper(".carousel .swiper-container", {
       pagination: {
@@ -168,6 +156,15 @@ $(window).scroll(function() {
         el: ".product-recipe__slider .swiper-scrollbar",
         hide: false,
         draggable: true
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: "auto",
+          scrollbar: false
+        },
+        1024: {
+          slidesPerView: 2,
+        }
       }
     });
 

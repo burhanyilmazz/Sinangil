@@ -12,6 +12,10 @@
     padding-bottom: 0px;
   }
 
+  @media screen and (max-width: 768px) {
+    padding-top: 80px;
+  }
+
   &__img {
     position: absolute;
     z-index: 1;
@@ -50,6 +54,11 @@
         right: 0;
         left: auto;
       }
+
+      @media screen and (max-width: 768px) {
+        right: -80px;
+        top: -80px
+      }
     }
   }
 
@@ -70,6 +79,9 @@
       font-size: 30px;
       font-family: "arista_pro_bold";
       margin: 0;
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
     }
 
     h2 {
@@ -77,6 +89,10 @@
       font-size: 84px;
       font-family: "arista_pro_bold";
       margin: 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 40px;
+      }
     }
 
     figure {
@@ -86,6 +102,14 @@
 
       @media screen and (max-width: 1024px) {
         left: 180px;
+      }
+
+      @media screen and (max-width: 768px) {
+        left: 150px;
+        top: -50px;
+        img {
+          width: 70%;
+        }
       }
     }
 
@@ -143,6 +167,10 @@
     .swiper {
       &-wrapper {
         padding: 50px 0 50px 50px;
+
+        @media screen and (max-width: 768px) {
+         padding: 50px 0;
+        }
       }
 
       &-slide {
@@ -151,6 +179,10 @@
 
         @media screen and (max-width: 1024px) {
           width: 300px;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 250px;
         }
 
         &-active {
@@ -179,9 +211,9 @@
             display: none;
           }
 
-          &:focus{
-						outline: 0;
-					}
+          &:focus {
+            outline: 0;
+          }
 
           &:after {
             font-family: "sinangil" !important;
@@ -219,9 +251,9 @@
             display: none;
           }
 
-          &:focus{
-						outline: 0;
-					}
+          &:focus {
+            outline: 0;
+          }
 
           &:after {
             font-family: "sinangil" !important;
@@ -249,20 +281,21 @@
         @media screen and (max-width: 1024px) {
           display: none;
         }
-        
-        &:before{
+
+        &:before {
           width: 100%;
           height: 2px;
           background: $poloBlue;
           display: block;
           position: absolute;
-          content: '';
+          content: "";
           top: 50%;
           margin-top: -1px;
         }
 
-        &-drag{
-          background: url(../images/icons/drag.png) center center $poloBlue no-repeat;
+        &-drag {
+          background: url(../images/icons/drag.png) center center $poloBlue
+            no-repeat;
           padding: 0 10px;
           height: 30px;
           border-radius: 15px;

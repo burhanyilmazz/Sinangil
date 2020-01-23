@@ -53,6 +53,10 @@
     position: absolute;
     z-index: 1;
 
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+
     &--2 {
       top: 0px;
       left: -20px;
@@ -82,6 +86,10 @@
   &__detail {
     margin-top: 110px;
     background: $blackSqueeze;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 70px;
+    }
   }
 
   &-detail {
@@ -91,6 +99,10 @@
         height: 100%;
         object-fit: cover;
         display: inherit;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
       }
     }
 
@@ -101,6 +113,9 @@
         font-size: 14px;
         color: $red;
         margin: 60px 0 0;
+        @media screen and (max-width: 768px) {
+          margin: 0;
+        }
       }
 
       h1 {
@@ -108,6 +123,9 @@
         font-size: 50px;
         margin: 0;
         font-weight: 600;
+        @media screen and (max-width: 768px) {
+          font-size: 40px;
+        }
       }
 
       i {
@@ -115,6 +133,10 @@
         display: inline-block;
         color: $red;
         margin: 40px 0;
+
+        @media screen and (max-width: 768px) {
+          margin: 10px 0;
+        }
 
         &:after {
           font-family: "sinangil" !important;
@@ -135,6 +157,7 @@
         color: $osloGrey;
         font-size: 16px;
         line-height: 24px;
+        font-weight: 500;
 
         span {
           color: $red;
@@ -152,12 +175,28 @@
       justify-content: space-evenly;
       height: 200px;
 
+      @media screen and (max-width: 640px) {
+        margin-bottom: 20px;
+        flex-direction: row;
+        height: 100px;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        figure {
+          width: 50%;
+          text-align: center;
+        }
+      }
+
       h5,
       h6 {
         font-size: 14px;
         color: $red;
         font-weight: 600;
         margin: 0;
+        @media screen and (max-width: 640px) {
+          width: 25%;
+        }
       }
 
       h6 {
@@ -168,6 +207,10 @@
     &__img {
       position: absolute;
       z-index: 1;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
 
       img {
         display: inherit;
@@ -268,6 +311,7 @@
   &-preparation {
     background: $white;
     position: relative;
+    overflow: hidden;
 
     h2 {
       color: $darkblue;
@@ -276,6 +320,8 @@
       font-weight: 600;
       margin: 0;
       margin-top: 35px;
+      position: relative;
+      z-index: 2;
 
       &:before {
         width: 69px;
@@ -343,10 +389,21 @@
       right: 0;
       height: 100%;
 
+      @media screen and (max-width: 1024px) {
+        position: relative;
+        width: 100%;
+        right: auto;
+        top: auto;
+        padding-right: 0;
+        padding-top: 20px;
+      }
+
       p {
         color: $rollingStone;
         font-size: 18px;
         line-height: 28px;
+        position: relative;
+        z-index: 2;
       }
 
       .swiper {
@@ -375,6 +432,10 @@
             position: relative;
             float: left;
             left: 0;
+
+            @media screen and (max-width: 768px) {
+              margin-left: calc(50% - 100px);
+            }
 
             &:focus {
               outline: 0;
@@ -413,6 +474,10 @@
             position: relative;
             float: left;
 
+            @media screen and (max-width: 768px) {
+              left: -1px;
+            }
+
             &:focus {
               outline: 0;
             }
@@ -440,6 +505,10 @@
           background: transparent;
           position: relative;
           float: left;
+
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
 
           &:before {
             width: 100%;

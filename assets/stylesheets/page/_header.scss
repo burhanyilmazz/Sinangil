@@ -227,9 +227,10 @@ $headerHeight: 110px;
       border-radius: 50%;
     }
 
-    select {
+    span {
       display: none;
     }
+
     ul {
       position: absolute;
       right: 0;
@@ -572,7 +573,7 @@ $headerHeight: 110px;
 @media screen and (max-width: 1024px) {
   .header {
     height: 70px;
-    border-color: rgba($color: $white, $alpha: .5);
+    border-color: rgba($color: $white, $alpha: 0.5);
 
     &__logo {
       width: 120px;
@@ -583,8 +584,10 @@ $headerHeight: 110px;
     }
 
     &__professional {
-      margin-top: 10px;
-      margin-right: 20px;
+      position: fixed;
+      top: 10px;
+      margin-left: 23px;
+      width: 132px;
 
       &:before {
         background: url(../images/icons/prof-h.png) no-repeat center center !important;
@@ -661,7 +664,7 @@ $headerHeight: 110px;
       position: fixed;
       left: 0;
       width: 100%;
-      background: $rumSwizzle;
+      background: #eef3f9;
       top: 70px;
       align-items: baseline;
 
@@ -677,7 +680,135 @@ $headerHeight: 110px;
         opacity: 1 !important;
         transform: translateY(0) !important;
         scroll-behavior: smooth;
+        padding: 0 40px;
 
+        .header {
+          &__nav {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 100px;
+
+            a {
+              height: 60px;
+              justify-content: flex-start;
+              border-radius: 10px;
+              padding-left: 50px;
+              color: #2b4ca6 !important;
+            }
+
+            &--dropdown {
+              margin-left: 0;
+
+              &:after {
+                width: 28px;
+                height: 15px;
+                content: "";
+                background: url("../images/header/arrow.png") no-repeat;
+                position: absolute;
+                right: 10px;
+              }
+
+              > a {
+                width: 100%;
+                padding-left: 50px !important;
+                color: $white !important;
+
+                &:before,
+                &:after {
+                  margin-left: -30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--open {
+      .header {
+        &__right {
+          position: fixed;
+          bottom: 0;
+          left: 10px;
+          width: calc(100% - 20px);
+          border-top: 1px solid #cdd4da;
+          padding: 13px 0;
+        }
+
+        &__calendar {
+          display: flex;
+          position: relative;
+
+          a {
+            color: #818d92;
+
+            &:before {
+              background: url(../images/icons/calendar-h.png) no-repeat;
+            }
+          }
+
+          &:after {
+            width: 1px;
+            height: 62px;
+            background: #cdd4da;
+            position: absolute;
+            right: -30px;
+            content: "";
+            top: -20px;
+          }
+        }
+
+        &__language {
+          display: flex;
+          width: 140px;
+
+          > a {
+            display: none;
+          }
+
+          ul {
+            display: flex;
+            position: relative;
+
+            li {
+              img {
+                display: none;
+              }
+
+              &:after {
+                display: none;
+              }
+
+              &:first-child {
+                margin: 0;
+                a {
+                  background: transparent;
+                }
+                border-right: 1px solid #cdd4da;
+              }
+
+              &:last-child {
+                margin: 0;
+              }
+
+              a {
+                width: 75px !important;
+                height: 62px !important;
+                color: #818d92;
+              }
+
+              &.active {
+                a {
+                  color: #2b4ca6;
+                }
+              }
+            }
+          }
+
+          span {
+            display: flex;
+          }
+        }
       }
     }
   }
