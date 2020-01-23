@@ -14181,7 +14181,7 @@ a {
   .header__professional {
     position: fixed;
     top: 10px;
-    margin-left: 33px;
+    right: 90px;
     width: 132px;
   }
   .header__professional:before {
@@ -14210,8 +14210,8 @@ a {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    position: absolute;
-    right: -15px;
+    position: fixed;
+    right: 0px;
     top: 0;
     z-index: 999;
   }

@@ -115,7 +115,6 @@ $(window).scroll(function() {
         $(".header-product__parent--active").removeClass("header-product__parent--active")
     });
 
-    
 
     $(".card--product li").on("mouseenter", function(e) {
       e.preventDefault();
@@ -165,9 +164,9 @@ $(window).scroll(function() {
       }
     }),
       new Swiper(".recipe-slider__slider .swiper-container", {
-        slidesPerView: "auto",
+        slidesPerView: 1,
         spaceBetween: 40,
-        loop: true,
+        width: 640,
         navigation: {
           nextEl: ".recipe-slider__slider .swiper-button-next",
           prevEl: ".recipe-slider__slider .swiper-button-prev"
@@ -178,10 +177,14 @@ $(window).scroll(function() {
           draggable: true
         },
         breakpoints: {
-          1024: {
+          480: {
             scrollbar: false,
             centeredSlides: true,
-            loop: false
+            slidesPerView: "auto",
+            width: 375,
+          },
+          1024: {
+            slidesPerView: "auto",
           }
         }
       });
@@ -189,7 +192,6 @@ $(window).scroll(function() {
     new Swiper(".product-recipe__slider .swiper-container", {
       slidesPerView: 3,
       spaceBetween: 40,
-      loop: true,
       navigation: {
         nextEl: ".product-recipe__slider .swiper-button-next",
         prevEl: ".product-recipe__slider .swiper-button-prev"
