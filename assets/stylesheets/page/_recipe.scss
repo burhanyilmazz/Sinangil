@@ -3,11 +3,17 @@
   position: relative;
   padding-bottom: 100px;
 
+  
+
   &-head {
     margin-top: 110px;
     padding: 140px 0 70px;
     position: relative;
     z-index: 2;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 70px;
+    }
 
     &__text {
       position: relative;

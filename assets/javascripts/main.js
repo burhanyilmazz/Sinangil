@@ -13,55 +13,96 @@ $(window).scroll(function() {
     var $parent = $(".header-product__parent");
     var $child = $(".header-product__child");
     var $image = $(".header-product__image");
+    var windowWidth = $(window).width()
 
-    $(".header-product__parent ul li").on("mouseenter", function(event) {
-      event.preventDefault();
-      var $this = $(this);
-      var $index = $this.index();
-
-      $(".header-product__parent--active").removeClass(
-        "header-product__parent--active"
-      );
-      $this.find("a").addClass("header-product__parent--active");
-
-      $child.find("ul").removeClass("header-product__child--active");
-      $child
-        .find("ul")
-        .eq($index)
-        .addClass("header-product__child--active");
-
-      $image.find("figure").removeClass("header-product__image--active");
-      $image
-        .find("figure")
-        .eq($index)
-        .addClass("header-product__image--active");
-    });
-
-    $('.header__shadow, .header__nav li:not(".header__nav--dropdown")').on("mouseenter", function(event) {
-        $(".header__shadow").removeClass("header__shadow--active");
-        $(".header__nav--dropdown").removeClass("header__nav--hover");
-        $(".header__product").removeClass("header__product--opened");
-        $(".header__product--opened").removeClass("header__product--opened");
-        $parent
-          .find("ul")
-          .eq(parentActiveIndex)
-          .addClass("header-product__parent--active");
+    if(windowWidth > 1024) {
+      $(".header-product__parent ul li").on("mouseenter", function(event) {
+        event.preventDefault();
+        var $this = $(this);
+        var $index = $this.index();
+  
+        $(".header-product__parent--active").removeClass("header-product__parent--active");
+        $this.find("a").addClass("header-product__parent--active");
+  
+        $child.find("ul").removeClass("header-product__child--active");
         $child
           .find("ul")
-          .eq(parentActiveIndex)
+          .eq($index)
           .addClass("header-product__child--active");
+  
+        $image.find("figure").removeClass("header-product__image--active");
         $image
           .find("figure")
-          .eq(parentActiveIndex)
+          .eq($index)
           .addClass("header-product__image--active");
-    });
+      });
+  
+      $('.header__shadow, .header__nav li:not(".header__nav--dropdown")').on("mouseenter", function(event) {
+          $(".header__shadow").removeClass("header__shadow--active");
+          $(".header__nav--dropdown").removeClass("header__nav--hover");
+          $(".header__product").removeClass("header__product--opened");
+          $(".header__product--opened").removeClass("header__product--opened");
+          $parent
+            .find("ul")
+            .eq(parentActiveIndex)
+            .addClass("header-product__parent--active");
+          $child
+            .find("ul")
+            .eq(parentActiveIndex)
+            .addClass("header-product__child--active");
+          $image
+            .find("figure")
+            .eq(parentActiveIndex)
+            .addClass("header-product__image--active");
+      });
+  
+      $(".header__nav--dropdown").on("mouseenter", function(e) {
+        var $this = $(this);
+        $this.addClass("header__nav--hover");
+        $(".header__product").addClass("header__product--opened");
+        $(".header__shadow").addClass("header__shadow--active");
+      });
+    } else {
+      $(".header__nav--dropdown").on("click", function(event) {
+        $(".header__product").addClass("header__product--opened");
+        $(".header-product__parent--active").removeClass("header-product__parent--active")
+      });
 
-    $(".header__nav--dropdown").on("mouseenter", function(e) {
-      var $this = $(this);
-      $this.addClass("header__nav--hover");
-      $(".header__product").addClass("header__product--opened");
-      $(".header__shadow").addClass("header__shadow--active");
-    });
+      $(".header-product__parent ul li").on("click", function(event) {
+        event.preventDefault();
+        var $this = $(this);
+        var $index = $this.index();
+  
+        $(".header-product__parent--active").removeClass("header-product__parent--active");
+        $this.find("a").addClass("header-product__parent--active");
+  
+        $child.find("ul").removeClass("header-product__child--active");
+        $child
+          .find("ul")
+          .eq($index)
+          .addClass("header-product__child--active");
+        $child.addClass("header-product__child--open")
+      });
+
+      $(".header-product__buttons li").on("click", function(event) {
+        var $this = $(this);
+        
+        if($this.index() == 0) {
+          $(".header__product").removeClass("header__product--opened");
+          $child.removeClass("header-product__child--open")
+          $(".header-product__parent--active").removeClass("header-product__parent--active")
+        } else {
+          if($child.hasClass("header-product__child--open")) {
+            $child.removeClass("header-product__child--open")
+          } else {
+            $(".header__product").removeClass("header__product--opened");
+            $child.removeClass("header-product__child--open")
+            $(".header-product__parent--active").removeClass("header-product__parent--active")
+          }
+        }
+      });
+    }
+
 
     $(".header__mobile-nav").on("click", function(e) {
       e.preventDefault(),
@@ -69,11 +110,12 @@ $(window).scroll(function() {
         $("nav").toggleClass("header__navigation--opened"),
         $("header").toggleClass("header--open"),
         $("html").toggleClass("disable-scroll");
+        $(".header__product").removeClass("header__product--opened");
+        $child.removeClass("header-product__child--open")
+        $(".header-product__parent--active").removeClass("header-product__parent--active")
     });
 
-    $(".header__nav--dropdown").on("click", function(event) {
-      $(".header__product--opened").addClass("header__product--opened");
-    });
+    
 
     $(".card--product li").on("mouseenter", function(e) {
       e.preventDefault();

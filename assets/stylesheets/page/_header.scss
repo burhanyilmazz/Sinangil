@@ -311,7 +311,7 @@ $headerHeight: 110px;
     border-bottom: 1px solid $white;
 
     .header {
-      &__logo{
+      &__logo {
         img {
           border-left: 1px solid transparent;
         }
@@ -546,6 +546,10 @@ $headerHeight: 110px;
       &--active {
         display: block !important;
       }
+
+      @media screen and (max-width: 1024px) {
+        display: none !important;
+      }
     }
   }
 
@@ -685,11 +689,39 @@ $headerHeight: 110px;
 
     &__nav {
       width: 100%;
+      flex-direction: column;
+      margin-top: 100px;
+
+      li {
+        width: 100%;
+
+        a {
+          width: 100%;
+        }
+      }
+
+      &--dropdown {
+        margin-left: 0;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &__right {
+      position: fixed;
+      bottom: -100px;
+      left: 10px;
+      width: calc(100% - 20px);
+      border-top: 1px solid #cdd4da;
+      padding: 13px 0;
+      @include transition(0.5s);
     }
 
     nav {
       transform: translateY(-100%);
-      @include transition(0.5s);
+      @include transition(0.4s);
       z-index: -100;
       height: 0;
       overflow: hidden;
@@ -697,6 +729,7 @@ $headerHeight: 110px;
       display: flex !important;
       position: fixed;
       left: 0;
+      right: 0;
       width: 100%;
       background: #eef3f9;
       top: 70px;
@@ -710,17 +743,14 @@ $headerHeight: 110px;
     &__navigation {
       &--opened {
         height: calc(100vh - 70px) !important;
-        overflow-y: auto !important;
+        overflow: auto !important;
         opacity: 1 !important;
         transform: translateY(0) !important;
         scroll-behavior: smooth;
         padding: 0 40px;
 
         .header {
-          &__nav {
-            flex-direction: column;
-            
-            margin-top: 100px;
+          &__nav {           
 
             a {
               height: 60px;
@@ -728,6 +758,12 @@ $headerHeight: 110px;
               border-radius: 10px;
               padding-left: 50px;
               color: #2b4ca6 !important;
+            }
+
+            &--active {
+              a {
+                color: #e70a34 !important
+              }
             }
 
             &--dropdown {
@@ -761,12 +797,7 @@ $headerHeight: 110px;
     &--open {
       .header {
         &__right {
-          position: fixed;
           bottom: 0;
-          left: 10px;
-          width: calc(100% - 20px);
-          border-top: 1px solid #cdd4da;
-          padding: 13px 0;
         }
 
         &__calendar {
@@ -828,12 +859,12 @@ $headerHeight: 110px;
               a {
                 width: 75px !important;
                 height: 62px !important;
-                color: #818d92;
+                color: #818d92 !important;
               }
 
               &.active {
                 a {
-                  color: #2b4ca6;
+                  color: #2b4ca6 !important;
                 }
               }
             }
@@ -841,6 +872,105 @@ $headerHeight: 110px;
 
           span {
             display: flex;
+          }
+        }
+
+        &__product {
+          height: calc(100vh - 70px);
+          position: fixed;
+          right: 0;
+          top: 70px;
+          width: 0;
+          overflow-x: hidden;
+          overflow-y: auto;
+          transform: translateY(0);
+
+          &--opened {
+            z-index: 8;
+            width: 100%;
+
+            .header {
+              &-product {
+                &__buttons {
+                  display: flex;
+                  position: fixed;
+                  z-index: 999;
+                  right: 0;
+                  ul {
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li {
+                      width: 70px;
+                      height: 70px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background: #798fc7;
+                      color: $white;
+                      font-size: 14px;
+                      font-weight: 600;
+                      flex-direction: column;
+
+                      &:last-child {
+                        background: #526db7;
+                      }
+                    }
+                  }
+                }
+
+                &__parent {
+                  padding-top: 100px;
+                  width: 100vw;
+                  z-index: 1;
+                  height: calc(100vh - 70px);
+                  overflow-y: auto;
+
+                  &--active,
+                  &:hover {
+                    background: transparent;
+                    color: #e70a34;
+
+                    &:after {
+                      display: none;
+                    }
+
+                    &:before {
+                      display: flex;
+                    }
+                  }
+
+                  ul {
+                    a {
+                      &:hover {
+                        background: transparent !important;
+                        color: #e70a34 !important;
+                      }
+
+                      &:after {
+                        display: none !important;
+                      }
+                    }
+                  }
+                }
+
+                &__child {
+                  position: fixed;
+                  z-index: 2;
+                  @include transition(0.5s);
+                  right: -100vw;
+                  width: 100vw;
+                  padding-top: 100px;
+                  height: calc(100vh - 70px);
+
+                  &--open {
+                    right: 0;
+                  }
+                }
+              }
+            }
           }
         }
       }
