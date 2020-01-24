@@ -330,10 +330,9 @@ $(window).scroll(function() {
       }     
     })
 
-    $(".nav-left > li").click(function(event) {
+    $(".nav-left li").click(function(event) {
       var $this = $(this);
       if($this.find("ul").length) {
-        event.preventDefault()
         $this.addClass("nav-left--open").siblings().removeClass("nav-left--open")
       }
     })
