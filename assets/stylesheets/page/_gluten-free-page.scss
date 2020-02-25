@@ -20,7 +20,7 @@
     }
     p {
       @media screen and (max-width: 1440px) {
-        width: 80%;
+        width: 82%;
       }
 
       @media screen and (max-width: 1024px) {
@@ -273,6 +273,10 @@
         margin-left: calc(180px + ((100vw - 1630px) / 2));
       }
 
+      @media screen and (max-width: 1440px) {
+        width: 80%;
+      }
+
       @media screen and (max-width: 1024px) {
         margin: 0 !important;
         width: 100%;
@@ -281,6 +285,13 @@
 
       blockquote {
         margin: 85px 0;
+        @media screen and (max-width: 1440px) {
+          width: 80%;
+          margin: 80px 0;
+        }
+        @media screen and (max-width: 1366px) {
+          margin: 62px 0;
+        }
         @media screen and (max-width: 1024px) {
           margin: 30px 0;
         }
@@ -305,6 +316,9 @@
           font-size: 16px;
           margin: 0;
           margin-top: 30px;
+          @media screen and (max-width: 1440px) {
+            width: 100%;
+          }
           @media screen and (max-width: 1024px) {
             font-size: 14px;
           }
@@ -395,7 +409,7 @@
     }
 
     &__slider {
-      margin-top: 120px;
+      margin-top: 50px;
       position: relative;
 
       @media screen and (max-width: 1024px) {
