@@ -232,7 +232,6 @@ $(window).scroll(function() {
     new Swiper(".recipe-preparation__slider .swiper-container", {
       slidesPerView: "auto",
       spaceBetween: 40,
-      loop: true,
       navigation: {
         nextEl: ".recipe-preparation__slider .swiper-button-next",
         prevEl: ".recipe-preparation__slider .swiper-button-prev"
@@ -241,11 +240,22 @@ $(window).scroll(function() {
         el: ".recipe-preparation__slider .swiper-scrollbar",
         hide: false,
         draggable: true
-      }
+      },
+      breakpoints: {
+          480: {
+            scrollbar: false,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            width: 375,
+          },
+          1024: {
+            slidesPerView: "auto",
+          }
+        }
     });
 
     new Swiper(".gluten-free-products__slider .swiper-container", {
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 30,
       navigation: {
         nextEl: ".gluten-free-products__slider .swiper-button-next",
